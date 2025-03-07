@@ -4,16 +4,11 @@ import UIKit
 
 class ButtonDSV2: UIButton {
     private lazy var pickIcon = UIImageView()
-    private lazy var productNameView = UIView()
     private lazy var productNameLabel = UILabel()
-    private lazy var dayFreeLabel = UILabel()
-    private lazy var bestOfferView = UIView()
     private lazy var productPriceFrame = UIView()
     private lazy var productPriceLabel = UILabel()
     private lazy var dividedPriceLabel = UILabel()
-   
-    private lazy var titlebestOfferLabel = UILabel()
-
+    
     let dsViewModel = DirectStoreViewModel.shared
     
     override init(frame: CGRect) {
@@ -33,75 +28,39 @@ class ButtonDSV2: UIButton {
     
     private func setupViews() {
         backgroundColor = AppColor.bg_1
-        layer.cornerRadius = 32.scaleX
+        layer.cornerRadius = 20.scaleX
         
         pickIcon.contentMode = .scaleAspectFit
         
-        productNameLabel.textColor = AppColor.text_black
-        productNameLabel.font = .systemFont(ofSize: 18, weight: .semibold)
-        
-        bestOfferView.cornerRadius = 12.scaleX
-        bestOfferView.backgroundColor = AppColor.premium
-        
+        productNameLabel.textColor = AppColor.yellow_dark
+        productNameLabel.font = .systemFont(ofSize: 18)
         
         productPriceFrame.isUserInteractionEnabled = false
         
-        productPriceLabel.textColor = AppColor.text_black
-        productPriceLabel.font = .systemFont(ofSize: 20, weight: .regular)
+        productPriceLabel.textColor = AppColor.yellow_dark
+        productPriceLabel.font = .systemFont(ofSize: 18, weight: .semibold)
         productPriceLabel.textAlignment = .right
         
         dividedPriceLabel.textAlignment = .right
-        
-        titlebestOfferLabel.textColor = AppColor.bg_1
-        titlebestOfferLabel.font = .systemFont(ofSize: 13, weight: .semibold)
-        
-        titlebestOfferLabel.text = "BEST OFFER"
-        titlebestOfferLabel.textColor = AppColor.text_black
-        
-        dayFreeLabel.text = "3 days free"
-        dayFreeLabel.textColor = AppColor.ds_rtp
-        dayFreeLabel.font = UIFont.systemFont(ofSize: 18, weight: .regular)
     }
     
     private func setupConstraints() {
         addSubview(pickIcon)
-        addSubview(productNameView)
+        addSubview(productNameLabel)
         addSubview(productPriceFrame)
-        productNameView.addSubview(productNameLabel)
-        productNameView.addSubview(dayFreeLabel)
-        productNameView.addSubview(bestOfferView)
-        bestOfferView.addSubview(titlebestOfferLabel)
-        
         productPriceFrame.addSubview(dividedPriceLabel)
         productPriceFrame.addSubview(productPriceLabel)
         
         pickIcon.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().inset(20.scaleX)
+            $0.leading.equalToSuperview().inset(16.scaleX)
             $0.size.equalTo(CGSize(width: 20.scaleX, height: 20.scaleX))
         }
         
-        productNameView.snp.makeConstraints {
+        productNameLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalTo(pickIcon.snp.trailing).inset(-12.scaleX)
-            $0.height.equalTo(44.scaleX)
-        }
-        
-        productNameLabel.snp.makeConstraints {
-            $0.top.leading.equalToSuperview()
-        }
-        
-        bestOfferView.snp.makeConstraints {
-            $0.size.equalTo(CGSize(width: 89.scaleX, height: 20.scaleX))
-            $0.bottom.leading.equalToSuperview()
-        }
-        
-        dayFreeLabel.snp.makeConstraints {
-            $0.bottom.leading.equalToSuperview()
-        }
-        
-        titlebestOfferLabel.snp.makeConstraints {
-            $0.center.equalToSuperview()
+            $0.trailing.lessThanOrEqualTo(productPriceFrame.snp.leading)
         }
         
         productPriceFrame.snp.makeConstraints {
@@ -123,30 +82,25 @@ class ButtonDSV2: UIButton {
         let dividedPrice = dsViewModel.weeklyPerYear(price: weeklyPrice) + symbol
         let devidedAtt = NSMutableAttributedString(string: "\(dividedPrice)",
                                                    attributes: [
-                                                    NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18,weight: .regular),
-                                                    NSAttributedString.Key.foregroundColor: AppColor.ds_rtp,
+                                                    NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18),
+                                                    NSAttributedString.Key.foregroundColor: AppColor.yellow_dark,
                                                     NSAttributedString.Key.strikethroughStyle: NSUnderlineStyle.single.rawValue,
                                                     NSAttributedString.Key.strikethroughColor: AppColor.yellow_dark])
         dividedPriceLabel.attributedText = devidedAtt
         dividedPriceLabel.isHidden = false
-        productNameLabel.text = "Yearly Access"
+        productNameLabel.text = "YEARLY"
         productPriceLabel.text = price + symbol
-        bestOfferView.isHidden = false
-        dayFreeLabel.isHidden = true
     }
     
     public func updateWeekly(price: String, symbol: String) {
-        productNameLabel.text = "Weekly Access"
+        productNameLabel.text = "WEEKLY"
         productPriceLabel.text = price + symbol
         dividedPriceLabel.isHidden = true
-        bestOfferView.isHidden = true
-        dayFreeLabel.isHidden = false
     }
     
     func updateState(isActive: Bool) {
-        layer.borderWidth = isActive ? 2 : 1
-        layer.borderColor = isActive ? AppColor.guRed.cgColor : AppColor.ds_rtp.cgColor
-        backgroundColor = isActive ? AppColor.guRed.withAlphaComponent(0.1) : AppColor.guBg
+        layer.borderWidth = isActive ? 4 : 1
+        layer.borderColor = isActive ? AppColor.yellow_normal_hover.cgColor : AppColor.bg_3.cgColor
         pickIcon.image = isActive ? R.image.icon_ds_tick_ac() :  R.image.icon_ds_tick_un()
     }
 }

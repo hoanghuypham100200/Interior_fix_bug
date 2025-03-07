@@ -21,12 +21,12 @@ extension UIButton {
         let tintedImage = icon?.withRenderingMode(.alwaysTemplate)
         let attribute = NSMutableAttributedString(string: text, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: textSize, weight: textWeight), NSAttributedString.Key.foregroundColor: textColor])
         self.tintColor = iconColor
-        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -padding)
+        self.titleEdgeInsets = UIEdgeInsets(top: 0, left: -padding, bottom: 0, right: 0)
         self.setAttributedTitle(attribute, for: .normal)
         self.setImage(tintedImage, for: .normal)
         self.backgroundColor = bgColor
         self.clipsToBounds = true
-        self.semanticContentAttribute = UIApplication.shared.userInterfaceLayoutDirection == .rightToLeft ? .forceRightToLeft : .forceLeftToRight
+        self.semanticContentAttribute = UIApplication.shared.userInterfaceLayoutDirection == .leftToRight ? .forceRightToLeft : .forceLeftToRight
         self.cornerRadius = corner.scaleX
     }
     
@@ -39,7 +39,7 @@ extension UIButton {
     }
     
     func setupPremiumButton() {
-        let titleAttribue = NSMutableAttributedString(string: "Pro", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .semibold), NSAttributedString.Key.foregroundColor: AppColor.text_black])
+        let titleAttribue = NSMutableAttributedString(string: "Pro", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .semibold), NSAttributedString.Key.foregroundColor: AppColor.bg_1])
         self.setAttributedTitle(titleAttribue, for: .normal)
         self.cornerRadius = 20.scaleX
         self.clipsToBounds = true

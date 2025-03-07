@@ -17,12 +17,14 @@ class RatioCell: BaseCollectionViewCell {
     }
     
     func setupViews() {
-        contentView.backgroundColor = AppColor.bg_ds
+        contentView.backgroundColor = AppColor.light
         contentView.layer.cornerRadius = 18
+        contentView.layer.borderColor = AppColor.bg_3.cgColor
+        contentView.layer.borderWidth = 1
         contentView.clipsToBounds = true
         
         nameLabel.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        nameLabel.textColor =  AppColor.text_black
+        nameLabel.textColor =  AppColor.yellow_dark
     }
     
     func setupConstrains() {
@@ -38,8 +40,9 @@ class RatioCell: BaseCollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            contentView.backgroundColor = isSelected ? AppColor.guRed : AppColor.bg_ds
-            nameLabel.textColor =  isSelected ? AppColor.guBg : AppColor.text_black
+            contentView.backgroundColor = isSelected ? AppColor.yellow_dark : AppColor.light
+            contentView.layer.borderWidth = isSelected ? 0 : 1
+            nameLabel.textColor =  isSelected ? AppColor.bg_1 : AppColor.text_black
         }
     }
     

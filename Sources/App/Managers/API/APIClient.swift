@@ -12,6 +12,7 @@ class APIClient {
         let apiKey = apiManager.isUsingLocalKeyValue ? Developer.localKey : apiManager.apiKeyValue
         let endpoint = apiManager.apiEndpointValue.flux
         var fluxModel = apiManager.fluxModelConfigValue
+        
         // Update flux model
         let room = viewModel.roomConfigValue.first(where: {$0.id == userDefault.configSetting.roomId})
         let promptConfig = styleModel.prompt.replacingOccurrences(of: Developer.replaceRoom, with: room?.title ?? "").replacingOccurrences(of: Developer.replaceUserInput, with: userInput)
@@ -31,29 +32,6 @@ class APIClient {
             }
             
         } catch {}
-    }
-    
-    static func requestUpdateImageFlux(userInput: String, controlImage: String, markImage: String, complete: @escaping (String?, Error?) -> ()) {
-        let apiKey = apiManager.isUsingLocalKeyValue ? Developer.localKey : apiManager.apiKeyValue
-        let endpoint = apiManager.apiEndpointValue.edit
-        var fluxModel = apiManager.fluxFillDevModelConfigValue
-        
-      
-        fluxModel.input.image = "data:application/octet-stream;base64,\(controlImage)"
-        
-        fluxModel.input.mask = "data:application/octet-stream;base64,\(markImage)"
-        
-        fluxModel.input.prompt = userInput
-
-        do {
-            let data = try JSONEncoder().encode(fluxModel)
-            configBodyRequestReplicate(endpoint: endpoint, apiKey: apiKey, model: data)  { urlGet, error in
-                complete(urlGet,error)
-            }
-            
-        } catch {
-            print("error APIClient")
-        }
     }
     
     static func configBodyRequestReplicate(endpoint: String, apiKey: String, model: Data, completion: @escaping (String?, Error?) -> ())  {
@@ -101,8 +79,6 @@ class APIClient {
             print("Encoding error: \(error.localizedDescription)")
         }
     }
-    
-   
     
     static func getResultReplicate<T: Decodable>(url: String, completion: @escaping (_ result: T?, _ error: Error?) -> Void) {
         let apiManager = APIManager.shared

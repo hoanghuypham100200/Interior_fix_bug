@@ -42,7 +42,7 @@ class LogoCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            contentView.layer.borderColor = isSelected ? AppColor.text_black.cgColor : UIColor.clear.cgColor
+            contentView.layer.borderColor = isSelected ? AppColor.yellow_normal.cgColor : UIColor.clear.cgColor
             iconApp.cornerRadius = isSelected ? 10.scaleX : 15.scaleX
             iconApp.snp.updateConstraints {
                 $0.edges.equalToSuperview().inset(isSelected ? 5.scaleX : 0)

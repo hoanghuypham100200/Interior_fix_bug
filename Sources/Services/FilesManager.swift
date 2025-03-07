@@ -52,40 +52,27 @@ class FilesManager {
     }
 
     func saveImageDocumentDirectory(artWork: UIImage, idImage: String) {
-        
         let fileManager = FileManager.default
-        let url = self.getDirectoryPath() as NSURL
-
-        // Generate image path
-        if let imagePath = url.appendingPathComponent("\(idImage)") {
-            let filePath = imagePath.path // ✅ Use `.path` instead of `.absoluteString`
-
-            DispatchQueue.global().async { [weak self] in
-                guard let wSelf = self else { return }
-                
-                let imgForSave = artWork
-                if let imageData = imgForSave.pngData() { // ✅ Correct function call
-                    // Remove existing file if it exists
-                    if fileManager.fileExists(atPath: filePath) {
-                        do {
-                            try fileManager.removeItem(atPath: filePath)
-                            print("File removed successfully.")
-                        } catch {
-                            print("Error removing file: \(error.localizedDescription)")
-                        }
-                    }
-                    
-                    // Create new file
-                    let success = fileManager.createFile(atPath: filePath, contents: imageData, attributes: nil)
-                    print(success ? "File saved successfully." : "Failed to save file.")
-                } else {
-                    print("Failed to convert image to PNG data.")
-                }
+        let url = (self.getDirectoryPath() as NSURL)
+        
+        // save image with name
+        let imagePath = url.appendingPathComponent("\(idImage)")
+        let urlString: String = imagePath!.absoluteString
+        
+        DispatchQueue.global().async { [weak self] in
+            guard let wSelf = self else { return }
+            
+            let ImgForSave = artWork
+            let imageData = UIImage.pngData(ImgForSave)
+            
+            do {
+                try fileManager.removeItem(at: imagePath!)
+            } catch let error {
+                print("errorrrrrrr: \(error.localizedDescription)")
             }
-        } else {
-            print("Failed to create image path.")
+            
+            fileManager.createFile(atPath: urlString as String, contents: imageData(), attributes: nil)
         }
-
     }
 
     func deleteDirectory(fileName: String) {

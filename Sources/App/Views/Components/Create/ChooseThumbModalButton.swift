@@ -69,7 +69,7 @@ class ChooseThumbModalButton: UIView {
     
     public func baseSetup(title: String, icon:String, weight: UIImage.SymbolWeight = .medium) {
         titleLabel.setText(text: title, color: AppColor.text_black)
-        iconImageView.setIconSystem(name: icon, color: AppColor.text_black, weight: weight, sizeIcon: 14)
+        iconImageView.setIconSystem(name: icon, color: AppColor.text_black, weight: weight)
     }
     
 }

@@ -21,13 +21,10 @@ class BaseViewController: UIViewController, GADBannerViewDelegate {
     public lazy var tabbarHeader = TabbarHeader()
     public lazy var screenHeader = ScreenHeader()
     public lazy var modalHeader = ModalHeader()
-    public lazy var gallerySrceenHeader = GalleryScreenHeader()
     
-    public lazy var bgPopupButton = UIButton()
-    
-    public lazy var deletePopupView = PopupContainerView()
-    public lazy var uploadPopupView = PopupContainerView()
-    public lazy var savePopupView = PopupContainerView()
+    public lazy var bgDeletePopupButton = UIButton()
+    public lazy var deletePopupView = DeletePopupView()
+
     // Rating popup
     public lazy var ratingView = RatingView()
     public lazy var bgRaingView = UIButton()
@@ -93,146 +90,45 @@ class BaseViewController: UIViewController, GADBannerViewDelegate {
             .disposed(by: disposeBag)
     }
     
-    
-    //save popup
-    func addSavePopupView () {
-        bgPopupButton.backgroundColor = AppColor.text_black.withAlphaComponent(0.9)
-        bgPopupButton.isHidden = true
-        
-        savePopupView.titleLabel.setText(text: "Save Image", color: AppColor.text_black_patriona)
-        
-        savePopupView.descriptionLabel.setText(text: "Are you sure you want to save this image to your list?", color: AppColor.text_black_patriona)
-        
-        savePopupView.rightButton.setupTitleButton(title: "Save", fontWeight: .semibold, fontSize: 18, titleColor: AppColor.text_black, bgColor: AppColor.bg_gray_button_2, radius: 15)
-        
-        savePopupView.leftButton.setupTitleButton(title: "Cancel", fontWeight: .regular, fontSize: 18, titleColor: AppColor.text_black, bgColor: AppColor.bg_gray_button_2, radius: 15)
-        
-        view.addSubview(bgPopupButton)
-        bgPopupButton.addSubview(savePopupView)
-        
-        bgPopupButton.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
-        savePopupView.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            $0.size.equalTo(CGSize(width: 340.scaleX, height: 192.scaleX))
-        }
-    }
-    
-    //upload popup
-    func addUploadPopupView () {
-        guard let window = UIApplication.shared.windows.first else { return }
-
-        bgPopupButton.backgroundColor = AppColor.text_black.withAlphaComponent(0.9)
-        bgPopupButton.isHidden = true
-
-        
-        uploadPopupView.titleLabel.setText(text: "Upload photo", color: AppColor.text_black_patriona)
-        
-        uploadPopupView.descriptionLabel.setText(text: "Please tap the corresponding button below to continue", color: AppColor.text_black_patriona)
-        
-        uploadPopupView.rightButton.setupTextIconButton(text: "Photos", textColor: .black, textSize: 18, textWeight: .regular, icon: UIImage(systemName: "photo.fill"), iconColor: .black, bgColor: AppColor.bg_gray_button_2, corner: 15, padding: 5)
-        
-        uploadPopupView.leftButton.setupTextIconButton(text: "Camera", textColor: .black, textSize: 18, textWeight: .regular, icon: UIImage(systemName: "camera.fill"), iconColor: .black, bgColor: AppColor.bg_gray_button_2, corner: 15, padding: 5)
-        
-        
-        window.addSubview(bgPopupButton)
-        bgPopupButton.addSubview(uploadPopupView)
-        
-        bgPopupButton.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
-        uploadPopupView.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            $0.size.equalTo(CGSize(width: 340.scaleX, height: 192.scaleX))
-        }
-    }
-    
     // delete popup
     func addDeletePopupView () {
-        bgPopupButton.backgroundColor = AppColor.text_black.withAlphaComponent(0.9)
-        bgPopupButton.isHidden = true
+        bgDeletePopupButton.backgroundColor = AppColor.text_black.withAlphaComponent(0.9)
+        bgDeletePopupButton.isHidden = true
         
+        view.addSubview(bgDeletePopupButton)
+        bgDeletePopupButton.addSubview(deletePopupView)
         
-        deletePopupView.titleLabel.setText(text: "Delete Image", color: AppColor.text_black_patriona)
-        
-        deletePopupView.descriptionLabel.setText(text: "Are you sure you want to remove this image from your list?", color: AppColor.text_black_patriona)
-        
-        deletePopupView.rightButton.setupTitleButton(title: "Delete", fontWeight: .regular, fontSize: 16, titleColor: AppColor.text_black, bgColor: AppColor.bg_gray_button_2, radius: 15)
-        
-        deletePopupView.leftButton.setupTitleButton(title: "Cancel", fontWeight: .semibold, fontSize: 16, titleColor: AppColor.text_black, bgColor: AppColor.bg_gray_button_2, radius: 15)
-        
-        
-        view.addSubview(bgPopupButton)
-        bgPopupButton.addSubview(deletePopupView)
-        
-        bgPopupButton.snp.makeConstraints {
+        bgDeletePopupButton.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         
         deletePopupView.snp.makeConstraints {
             $0.center.equalToSuperview()
-            $0.size.equalTo(CGSize(width: 340.scaleX, height: 192.scaleX))
+            $0.size.equalTo(CGSize(width: 305.scaleX, height: 219.scaleX))
         }
     }
     
     func hideDeletePopup() {
-        bgPopupButton.isHidden = true
+        bgDeletePopupButton.isHidden = true
     }
     
     // Show rw ad popup
-    func showPopup(view: UIView) {
-        bgPopupButton.isHidden = false
-        view.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+    func showDeletePopup() {
+        bgDeletePopupButton.isHidden = false
+        deletePopupView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         UIView.animate(withDuration: 0.5,
                        delay: 0,
                        usingSpringWithDamping: 0.3,
                        initialSpringVelocity: 5.0,
                        options: .allowUserInteraction,
                        animations: {
-            view.alpha = 1
-            view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            self.deletePopupView.alpha = 1
+            self.deletePopupView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
     
-    
-    func configTapSavePopup() {
-        bgPopupButton.rx.tap
-            .throttle(.milliseconds(300), scheduler: scheduler.main)
-            .withUnretained(self)
-            .observe(on: scheduler.main)
-            .subscribe(onNext: { owner, _ in
-                owner.hideDeletePopup()
-            })
-            .disposed(by: disposeBag)
-        
-        
-        savePopupView.leftButton.rx.tap
-            .throttle(.milliseconds(300), scheduler: scheduler.main)
-            .withUnretained(self)
-            .observe(on: scheduler.main)
-            .subscribe(onNext: { owner, _ in
-                owner.hideDeletePopup()
-            })
-            .disposed(by: disposeBag)
-    }
-    
-    func configTapUploadPopup() {
-        bgPopupButton.rx.tap
-            .throttle(.milliseconds(300), scheduler: scheduler.main)
-            .withUnretained(self)
-            .observe(on: scheduler.main)
-            .subscribe(onNext: { owner, _ in
-                owner.hideDeletePopup()
-            })
-            .disposed(by: disposeBag)
-        
-    }
-    
     func configTapDeletePopup() {
-        bgPopupButton.rx.tap
+        bgDeletePopupButton.rx.tap
             .throttle(.milliseconds(300), scheduler: scheduler.main)
             .withUnretained(self)
             .observe(on: scheduler.main)
@@ -241,8 +137,16 @@ class BaseViewController: UIViewController, GADBannerViewDelegate {
             })
             .disposed(by: disposeBag)
         
+        deletePopupView.closeButton.rx.tap
+            .throttle(.milliseconds(300), scheduler: scheduler.main)
+            .withUnretained(self)
+            .observe(on: scheduler.main)
+            .subscribe(onNext: { owner, _ in
+                owner.hideDeletePopup()
+            })
+            .disposed(by: disposeBag)
         
-        deletePopupView.leftButton.rx.tap
+        deletePopupView.noButton.rx.tap
             .throttle(.milliseconds(300), scheduler: scheduler.main)
             .withUnretained(self)
             .observe(on: scheduler.main)
@@ -261,31 +165,6 @@ class BaseViewController: UIViewController, GADBannerViewDelegate {
             $0.top.equalTo(view.snp_topMargin)
             $0.height.equalTo(50.scaleX)
         }
-    }
-    
-    func addGalleryScreenHeader() {
-        view.addSubview(gallerySrceenHeader)
-        gallerySrceenHeader.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(view.snp_topMargin)
-            $0.height.equalTo(50.scaleX)
-        }
-    }
-    
-    //MARK: Gallery header
-
-    
-
-    
-    func actionBackGalleryScreenHeader() {
-        gallerySrceenHeader.backButton.rx.tap
-            .throttle(.milliseconds(300), scheduler: scheduler.main)
-            .withUnretained(self)
-            .observe(on: scheduler.main)
-            .subscribe(onNext: { owner, _ in
-                owner.navigationController?.popViewController(animated: true)
-            })
-            .disposed(by: disposeBag)
     }
     
     func actionBackScreenHeader() {
@@ -338,10 +217,11 @@ class BaseViewController: UIViewController, GADBannerViewDelegate {
         self.navigationController?.viewControllers = navigationArray
     }
     
+    // MARK: Rating -
     func addRatingView() {
         bgRaingView.backgroundColor = AppColor.text_black.withAlphaComponent(0.85)
         bgRaingView.isHidden = true
-
+        
         view.addSubview(bgRaingView)
         bgRaingView.addSubview(ratingView)
         
@@ -356,7 +236,6 @@ class BaseViewController: UIViewController, GADBannerViewDelegate {
         
     }
     
-    // MARK: Rating -
     func showRating() {
         bgRaingView.isHidden = false
         ratingView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
@@ -438,9 +317,6 @@ class BaseViewController: UIViewController, GADBannerViewDelegate {
     }
     
     // MARK: Popup -
-    
-    
-    
     func showPopup(message: String, duration: Double) {
         view.makeToast(message, duration: duration, position: .center)
     }
@@ -633,22 +509,13 @@ class BaseViewController: UIViewController, GADBannerViewDelegate {
     
     func shareImage(imageResult: UIImage?) {
         guard let image = imageResult else { return }
-
-        let activityViewController = UIActivityViewController(activityItems: [image] as [Any], applicationActivities: nil)
-        
-        let navController = UINavigationController(rootViewController: activityViewController)
-           
-           // Hide the navigation bar
-           navController.navigationBar.isHidden = true
-        navController.modalPresentationStyle = .formSheet
-        
+        let imageToShare = [ image ]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare as [Any], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = view
-       
-        present(navController, animated: true)
+        present(activityViewController, animated: true, completion: nil)
     }
 }
 
-// Hiển thị full screen trên iP
 extension BaseViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true

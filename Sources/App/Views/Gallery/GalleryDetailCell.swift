@@ -12,8 +12,7 @@ class GalleryDetailCell: BaseCollectionViewCell {
     private lazy var frameThumbView = UIView()
     private lazy var resultImageView = UIImageView()
     private lazy var oldImageView = UIImageView()
-    private lazy var showOldImageButton  = UIButton()
-//    private lazy var descriptionResultView = DescriptionResultView()
+    private lazy var descriptionResultView = DescriptionResultView()
     private let filesManager = FilesManager.shared
     
     var artwork: ArtworkModel?
@@ -39,25 +38,16 @@ class GalleryDetailCell: BaseCollectionViewCell {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.clipsToBounds = true
         
-        resultImageView.layer.cornerRadius = 15
+        resultImageView.contentMode = .scaleAspectFit
         resultImageView.clipsToBounds = true
-
         
-        frameThumbView.layer.cornerRadius = 15
-        frameThumbView.clipsToBounds = true
-        frameThumbView.layer.borderColor = AppColor.guLine2.cgColor
-        frameThumbView.layer.borderWidth = 1
-
-        oldImageView.alpha = 0
-        oldImageView.layer.cornerRadius = 15
+        oldImageView.contentMode = .scaleAspectFit
         oldImageView.clipsToBounds = true
-
+        oldImageView.alpha = 0
         
-        showOldImageButton.setImage(UIImage(systemName: "square.split.2x1",withConfiguration: UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold)), for: .normal)
-        showOldImageButton.tintColor = AppColor.guBg
-        showOldImageButton.layer.cornerRadius = 20
-        showOldImageButton.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        
+        frameThumbView.clipsToBounds = true
+        frameThumbView.layer.borderColor = AppColor.bg_gray_button.cgColor
+        frameThumbView.layer.borderWidth = 1
         
     }
     
@@ -67,9 +57,7 @@ class GalleryDetailCell: BaseCollectionViewCell {
         contentScrollView.addSubview(frameThumbView)
         frameThumbView.addSubview(resultImageView)
         frameThumbView.addSubview(oldImageView)
-//        frameThumbView.addSubview(iconButton)
-        contentView.addSubview(showOldImageButton)
-        
+        contentScrollView.addSubview(descriptionResultView)
         
         scrollView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -80,9 +68,9 @@ class GalleryDetailCell: BaseCollectionViewCell {
         }
         
         frameThumbView.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(-1)
             $0.top.equalToSuperview()
-            $0.size.equalTo(CGSize(width: 344.scaleX, height: 344.scaleX))
+            $0.height.equalTo(330.scaleX)
         }
         
         resultImageView.snp.makeConstraints {
@@ -93,23 +81,16 @@ class GalleryDetailCell: BaseCollectionViewCell {
             $0.edges.equalToSuperview()
         }
         
-        showOldImageButton.snp.makeConstraints {
-            $0.size.equalTo(CGSize(width: 40, height: 40))
-            $0.bottom.equalTo(frameThumbView.snp.bottom).inset(20)
-            $0.trailing.equalTo(frameThumbView.snp.trailing).inset(20)
-
+        descriptionResultView.snp.makeConstraints {
+            $0.top.equalTo(resultImageView.snp.bottom).inset(-16.scaleX)
+            $0.leading.trailing.equalToSuperview().inset(16.scaleX)
+            $0.bottom.equalToSuperview().inset(50.scaleX)
         }
-        
-//        descriptionResultView.snp.makeConstraints {
-//            $0.top.equalTo(resultImageView.snp.bottom).inset(-16.scaleX)
-//            $0.leading.trailing.equalToSuperview().inset(16.scaleX)
-//            $0.bottom.equalToSuperview().inset(50.scaleX)
-//        }
     }
     
     private func setupRx() {
         let longPressGesture = UILongPressGestureRecognizer()
-        showOldImageButton.addGestureRecognizer(longPressGesture)
+        descriptionResultView.changeThumbButton.addGestureRecognizer(longPressGesture)
         
         longPressGesture.rx.event
             .subscribe(onNext: { [weak self] gesture  in
@@ -137,7 +118,7 @@ class GalleryDetailCell: BaseCollectionViewCell {
     
     public func update(artwork : ArtworkModel) {
         self.artwork = artwork
-//        descriptionResultView.updateData(artwork: artwork)
+        descriptionResultView.updateData(artwork: artwork)
         resultImageView.loadImageKF(thumbURL: artwork.url) { _ in}
         oldImageView.image = filesManager.getImageFromDocumentDirectory(id: artwork.id)
         

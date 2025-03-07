@@ -20,14 +20,16 @@ class RoomCell: BaseCollectionViewCell {
     }
     
     func setupViews() {
-        backgroundColor = AppColor.bg_ds
+        backgroundColor = AppColor.light
         layer.cornerRadius = 18
+        layer.borderColor = AppColor.light_action.cgColor
+        layer.borderWidth = 1
         clipsToBounds = true
         
         iconImageView.contentMode = .scaleAspectFit
         
-        nameLabel.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
-        nameLabel.textColor =  AppColor.text_black
+        nameLabel.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        nameLabel.textColor =  AppColor.yellow_dark
     }
     
     func setupConstrains() {
@@ -61,10 +63,11 @@ class RoomCell: BaseCollectionViewCell {
     }
     
     func updateView(isSelected: Bool) {
-        backgroundColor = isSelected ? AppColor.guRed : AppColor.bg_ds
+        backgroundColor = isSelected ? AppColor.yellow_dark : AppColor.light
+        layer.borderWidth = isSelected ? 0 : 1
         guard let room = roomType else { return }
-        nameLabel.textColor =  isSelected ? AppColor.guBg : AppColor.text_black
-        iconImageView.setIconSystem(name: room.icon, color: isSelected ? AppColor.guBg :AppColor.text_black, weight: .regular, sizeIcon: 14)
+        nameLabel.textColor =  isSelected ? AppColor.light : AppColor.yellow_dark
+        iconImageView.setIconSystem(name: room.icon, color: isSelected ? AppColor.light :AppColor.yellow_dark, weight: .regular)
     }
     
     func updateIconImageView(room: RoomTypeModel) {

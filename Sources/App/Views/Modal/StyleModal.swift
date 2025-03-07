@@ -22,11 +22,11 @@ class StyleModal: BaseViewController, PanModalPresentable {
     }
     
     var shortFormHeight: PanModalHeight {
-        return .contentHeight( Developer.isHasNortch ? 567 : 520)
+        return .contentHeight( Developer.isHasNortch ? 720 : 520)
     }
 
     var longFormHeight: PanModalHeight {
-        return .contentHeight( Developer.isHasNortch ? 567 : 520)
+        return .contentHeight( Developer.isHasNortch ? 720 : 520)
     }
     
     var cornerRadius: CGFloat {
@@ -59,12 +59,12 @@ extension StyleModal {
         layoutStyle.minimumLineSpacing = 12
         layoutStyle.minimumInteritemSpacing = 0
         layoutStyle.scrollDirection = .vertical
-        layoutStyle.itemSize = CGSize(width: 83.scaleX, height: 83.scaleX)
+        layoutStyle.itemSize = CGSize(width: (view.frame.width - 32)/2, height: 143.scaleX)
         allStyleCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layoutStyle)
         allStyleCollectionView.register(StyleModalCell.self, forCellWithReuseIdentifier: StyleModalCell.identifier)
         allStyleCollectionView.dataSource = self
         allStyleCollectionView.delegate = self
-        allStyleCollectionView.contentInset = UIEdgeInsets(top: 15.scaleX, left: 16, bottom: 20.scaleX, right: 16)
+        allStyleCollectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 20.scaleX, right: 16)
         allStyleCollectionView.setupCollectionView()
         
         //MARK: Setup constrains
@@ -73,8 +73,8 @@ extension StyleModal {
 
         allStyleCollectionView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(462.scaleX)
-            $0.top.equalTo(modalHeader.snp.bottom).inset(-5.scaleX)
+            $0.bottom.equalToSuperview()
+            $0.top.equalTo(modalHeader.snp.bottom)
         }
     }
 }

@@ -4,6 +4,7 @@ import SnapKit
 import UIKit
 
 class SelectRatioView: UIView {
+    private lazy var iconRatioImageView = UIImageView()
     private lazy var titleRatioLabel = UILabel()
     public lazy var ratioCollectionView = UICollectionView()
     
@@ -22,9 +23,10 @@ class SelectRatioView: UIView {
     }
     
     private func setupViews() {
+        iconRatioImageView.setIconSystem(name: "rectangle.3.group", color: AppColor.yellow_dark, weight: .regular)
         
         titleRatioLabel.setText(text: "Select Ratio", color: AppColor.text_black)
-        titleRatioLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        titleRatioLabel.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         
        
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -42,19 +44,24 @@ class SelectRatioView: UIView {
     }
     
     private func setupConstraints() {
+        addSubview(iconRatioImageView)
         addSubview(titleRatioLabel)
         addSubview(ratioCollectionView)
         
-
-        
-        titleRatioLabel.snp.makeConstraints {
+        iconRatioImageView.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(16.scaleX)
             $0.top.equalToSuperview()
+            $0.size.equalTo(CGSize(width: 26.scaleX, height: 19.scaleX))
+        }
+        
+        titleRatioLabel.snp.makeConstraints {
+            $0.leading.equalTo(iconRatioImageView.snp.trailing).inset(-5.scaleX)
+            $0.centerY.equalTo(iconRatioImageView)
         }
         
         ratioCollectionView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(titleRatioLabel.snp.bottom).inset(-15.scaleX)
+            $0.top.equalTo(iconRatioImageView.snp.bottom).inset(-15.scaleX)
             $0.height.equalTo(36.scaleX)
         }
     }

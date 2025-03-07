@@ -35,7 +35,7 @@ final class AppRouter {
     
     static func pickDS() -> DirectStoreBaseViewController {
         #if DEBUG
-        return DirectStoreV3ViewController()
+        return DirectStoreV2ViewController()
         #else
         let dsType = UserDefaultService.shared.dsConfig.type
         switch dsType {

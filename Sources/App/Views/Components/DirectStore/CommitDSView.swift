@@ -78,7 +78,7 @@ class ItemCommitDS: UIView {
         titleCommitLabel.textColor = AppColor.text_black_patriona
         titleCommitLabel.font = .systemFont(ofSize: 14, weight: .semibold)
         
-        iconCommit.setIconSystem(name: "checkmark", color: AppColor.yellow_normal_hover, weight: .medium, sizeIcon: 14)
+        iconCommit.setIconSystem(name: "checkmark", color: AppColor.yellow_normal_hover, weight: .medium)
         iconCommit.contentMode = .scaleAspectFit
     }
     

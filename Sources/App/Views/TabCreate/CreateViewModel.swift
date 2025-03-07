@@ -99,12 +99,12 @@ extension CreateViewModel {
     // Update usage
     func updateUsage() {
         if userDefault.isPurchase {
-            userDefault.usage.createUsagePremiumCount += 1
+            userDefault.usage.usagePremiumCount += 1
         } else {
             userDefault.usage.usageFreeCount += 1
         }
         // Update usage left
-        modelManager.updateCreateUsageLeft()
+        modelManager.updateUsageLeft()
     }
     
     func checkGen(loadingView: NVActivityIndicatorView,

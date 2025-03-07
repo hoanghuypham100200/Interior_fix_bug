@@ -227,16 +227,6 @@ extension SettingViewController: SKStoreProductViewControllerDelegate {
         // Header
         configTapPremiumTabbarHeader()
         
-        tabbarHeader.galleryButton.rx.tap
-            .throttle(.milliseconds(300), scheduler: scheduler.main)
-            .withUnretained(self)
-            .observe(on: scheduler.main)
-            .subscribe(onNext: { owner, _ in
-                let galleryVC = GalleryViewController()
-                self.navigationController?.pushViewController(galleryVC, animated: true)
-            })
-            .disposed(by: disposeBag)
-        
         appView.changeIconButton.rx.tap
             .throttle(.milliseconds(300), scheduler: scheduler.main)
             .withUnretained(self)

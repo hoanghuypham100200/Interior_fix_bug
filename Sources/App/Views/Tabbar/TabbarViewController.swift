@@ -1,5 +1,6 @@
 import Foundation
 import NVActivityIndicatorView
+import IQKeyboardManagerSwift
 import SnapKit
 import UIKit
 import RxSwift
@@ -18,8 +19,7 @@ class TabBarViewController: UITabBarController {
     let disposeBag = DisposeBag()
     private let viewModel = TabbarViewModel.init()
     private let rewardedAdService = RewardedAdService.shared
-    let tabbarViewModel = TabbarViewModel.shared
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        setValue(CustomTabBar(), forKey: "tabBar")
@@ -32,10 +32,10 @@ class TabBarViewController: UITabBarController {
         
         self.delegate = self
         rewardedAdService.delegate = self
-        tabBar.backgroundColor = .white
+        tabBar.backgroundColor = AppColor.light
         tabBar.unselectedItemTintColor = AppColor.yellow_dark
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10, weight: .medium), NSAttributedString.Key.foregroundColor: AppColor.text_black], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10, weight: .medium), NSAttributedString.Key.foregroundColor: AppColor.yellow_normal_hover], for: .normal)
         
         // rw option
         rwOpacityButton.backgroundColor = AppColor.text_black.withAlphaComponent(0.85)
@@ -72,10 +72,7 @@ class TabBarViewController: UITabBarController {
     }
     
     func setupViewController() {
-        viewControllers = [ historyTab, createTab, settingTab]
-        if let index = viewControllers?.firstIndex(of: createTab) {
-            selectedIndex = index
-        }
+        viewControllers = [createTab, historyTab, settingTab]
     }
     
     lazy var createTab: UIViewController = {
@@ -83,8 +80,8 @@ class TabBarViewController: UITabBarController {
         var imageUnSelect: UIImage?
         
         if #available(iOS 18.0, *) {
-            imageUnSelect = UIImage(systemName: "circle.hexagongrid.fill")?.setIconSystem(name: "circle.hexagongrid.fill", color: AppColor.ds_rtp, weight: .bold).withRenderingMode(.alwaysOriginal)
-            imageSelected = UIImage(systemName: "circle.hexagongrid.fill")?.setIconSystem(name: "circle.hexagongrid.fill", color: AppColor.text_black, weight: .bold).withRenderingMode(.alwaysOriginal)
+            imageUnSelect = UIImage(systemName: "wand.and.sparkles")?.setIconSystem(name: "wand.and.sparkles", color: AppColor.yellow_dark, weight: .bold).withRenderingMode(.alwaysOriginal)
+            imageSelected = UIImage(systemName: "wand.and.sparkles")?.setIconSystem(name: "wand.and.sparkles", color: AppColor.yellow_normal_hover, weight: .bold).withRenderingMode(.alwaysOriginal)
         }else {
             imageUnSelect = R.image.tab_create_unselect()?.withRenderingMode(.alwaysOriginal)
             imageSelected = R.image.tab_create_selected()?.withRenderingMode(.alwaysOriginal)
@@ -101,15 +98,15 @@ class TabBarViewController: UITabBarController {
         var imageUnSelect: UIImage?
         
         if #available(iOS 18.0, *) {
-            imageUnSelect = UIImage(systemName: "sparkles")?.setIconSystem(name: "sparkles", color: AppColor.ds_rtp, weight: .bold).withRenderingMode(.alwaysOriginal)
-            imageSelected = UIImage(systemName: "sparkles")?.setIconSystem(name: "sparkles", color: AppColor.text_black, weight: .bold).withRenderingMode(.alwaysOriginal)
+            imageUnSelect = UIImage(systemName: "clock.fill")?.setIconSystem(name: "clock.fill", color: AppColor.yellow_dark, weight: .bold).withRenderingMode(.alwaysOriginal)
+            imageSelected = UIImage(systemName: "clock.fill")?.setIconSystem(name: "clock.fill", color: AppColor.yellow_normal_hover, weight: .bold).withRenderingMode(.alwaysOriginal)
         }else {
             imageUnSelect = R.image.tab_history_unselect()?.withRenderingMode(.alwaysOriginal)
             imageSelected = R.image.tab_history_selected()?.withRenderingMode(.alwaysOriginal)
         }
         
-        let historyTabItem = UITabBarItem(title: "Retouch", image: imageUnSelect , selectedImage: imageSelected )
-        let historyNavTab =  RetouchViewController()
+        let historyTabItem = UITabBarItem(title: "History", image: imageUnSelect , selectedImage: imageSelected )
+        let historyNavTab =  HistoryViewController()
         historyNavTab.tabBarItem = historyTabItem
         return historyNavTab
     }()
@@ -119,8 +116,8 @@ class TabBarViewController: UITabBarController {
         var imageUnSelect: UIImage?
         
         if #available(iOS 18.0, *) {
-            imageUnSelect = UIImage(systemName: "gearshape.fill")?.setIconSystem(name: "gearshape.fill", color: AppColor.ds_rtp, weight: .bold).withRenderingMode(.alwaysOriginal)
-            imageSelected = UIImage(systemName: "gearshape.fill")?.setIconSystem(name: "gearshape.fill", color: AppColor.text_black, weight: .bold).withRenderingMode(.alwaysOriginal)
+            imageUnSelect = UIImage(systemName: "gearshape.fill")?.setIconSystem(name: "gearshape.fill", color: AppColor.yellow_dark, weight: .bold).withRenderingMode(.alwaysOriginal)
+            imageSelected = UIImage(systemName: "gearshape.fill")?.setIconSystem(name: "gearshape.fill", color: AppColor.yellow_normal_hover, weight: .bold).withRenderingMode(.alwaysOriginal)
         }else {
             imageUnSelect = R.image.tab_setting_unselect()?.withRenderingMode(.alwaysOriginal)
             imageSelected = R.image.tab_setting_selected()?.withRenderingMode(.alwaysOriginal)
@@ -172,7 +169,7 @@ class TabBarViewController: UITabBarController {
             .observe(on: scheduler.main)
             .subscribe(onNext: { owner, _ in
                 CreateViewModel.shared.updateCancelGenView(stopGen: true)
-                owner.tabbarViewModel.updateShowProccessingView(isShow: false)
+                owner.hideProccessingView()
             })
             .disposed(by: disposeBag)
         
@@ -180,7 +177,7 @@ class TabBarViewController: UITabBarController {
             .observe(on: scheduler.main)
             .withUnretained(self)
             .subscribe(onNext: { owner, isShow in
-                isShow ? self.showRwPopup() : self.hideRwPopup()
+                isShow ? owner.showRwPopup() : owner.hideRwPopup()
             })
             .disposed(by: disposeBag)
         
@@ -253,6 +250,7 @@ class TabBarViewController: UITabBarController {
         }, completion: nil)
     }
     
+    // MARK: Rw popup
     // Hide rw ad poup
     func hideProccessingView() {
         proccessingView.isHidden = true

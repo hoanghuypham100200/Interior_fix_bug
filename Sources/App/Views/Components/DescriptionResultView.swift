@@ -32,7 +32,7 @@ class DescriptionResultView: UIView {
         changeThumbButton.layer.cornerRadius = 20.scaleX
         changeThumbButton.setSystemIcon("rectangle.righthalf.filled", pointSize: 20,weight: .medium)
         
-        iconInputImageView.setIconSystem(name: "square.and.pencil", color: AppColor.yellow_dark, weight: .medium, sizeIcon: 14)
+        iconInputImageView.setIconSystem(name: "square.and.pencil", color: AppColor.yellow_dark, weight: .medium)
         iconInputImageView.contentMode = .scaleAspectFit
         
         titleInputLabel.font = .systemFont(ofSize: 16, weight: .semibold)

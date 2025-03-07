@@ -4,6 +4,7 @@ import SnapKit
 import UIKit
 
 class SelectRoomView: UIView {
+    private lazy var iconRoomImageView = UIImageView()
     private lazy var titleRoomLabel = UILabel()
     public lazy var viewAllButton = ViewAllButton()
     public lazy var roomCollectionView = UICollectionView()
@@ -23,9 +24,10 @@ class SelectRoomView: UIView {
     }
     
     private func setupViews() {
+        iconRoomImageView.setIconSystem(name: "rhombus", color: AppColor.yellow_dark, weight: .regular)
         
-        titleRoomLabel.setText(text: "Select room", color: AppColor.text_black)
-        titleRoomLabel.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        titleRoomLabel.setText(text: "Select Room", color: AppColor.text_black)
+        titleRoomLabel.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
@@ -40,25 +42,31 @@ class SelectRoomView: UIView {
     }
     
     private func setupConstraints() {
+        addSubview(iconRoomImageView)
         addSubview(titleRoomLabel)
         addSubview(viewAllButton)
         addSubview(roomCollectionView)
         
-
-        titleRoomLabel.snp.makeConstraints {
+        iconRoomImageView.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(16.scaleX)
             $0.top.equalToSuperview()
+            $0.size.equalTo(CGSize(width: 16.scaleX, height: 19.scaleX))
+        }
+        
+        titleRoomLabel.snp.makeConstraints {
+            $0.leading.equalTo(iconRoomImageView.snp.trailing).inset(-5.scaleX)
+            $0.centerY.equalTo(iconRoomImageView)
         }
         
         viewAllButton.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(16.scaleX)
             $0.size.equalTo(CGSize(width: 70.scaleX, height: 17.scaleX))
-            $0.centerY.equalTo(titleRoomLabel)
+            $0.centerY.equalTo(iconRoomImageView)
         }
         
         roomCollectionView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(titleRoomLabel.snp.bottom).inset(-10.scaleX)
+            $0.top.equalTo(iconRoomImageView.snp.bottom).inset(-15.scaleX)
             $0.height.equalTo(36.scaleX)
         }
     }
