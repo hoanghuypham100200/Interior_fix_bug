@@ -53,7 +53,7 @@ extension RoomModal {
         view.layer.cornerRadius = 30.scaleX
         view.clipsToBounds = true
         
-        modalHeader.update(title: "Select Room")
+        modalHeader.update(title: "Select room")
         
         let layout = AlignLeftFlowLayout()
         layout.minimumLineSpacing = 10.scaleX

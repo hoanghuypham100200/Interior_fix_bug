@@ -6,19 +6,21 @@ import UIKit
 import RxSwift
 import PanModal
 
-class CreateViewController: BaseViewController {
+class CreateViewController: BaseViewController, GalleryViewControllerDelegate {
+    
     private lazy var scrollView = UIScrollView()
     private lazy var contentView = UIView()
     private lazy var chooseThumbView = ChooseThumbView()
     private lazy var selectRoomView = SelectRoomView()
     private lazy var selectStyleView = SelectStyleView()
-    private lazy var selectRatioView = SelectRatioView()
-    private lazy var inputPromptView = InputPromptView()
+//    private lazy var selectRatioView = SelectRatioView()
+//    private lazy var inputPromptView = InputPromptView()
     private lazy var generateButton = UIButton()
     
     private let loadingView = NVActivityIndicatorView(frame: .zero, type: .circleStrokeSpin, color: AppColor.yellow_normal_hover, padding: 0)
     
     var chooseImage: UIImage?
+    var thumbImageArray: [ArtworkModel] = [ ]
     
     var stopGen = false
     let viewModel: CreateViewModel = .init()
@@ -57,16 +59,19 @@ extension CreateViewController {
     
     override func setupViews() {
         super.setupViews()
-        
+     
         // MARK: set up Views
         imagePicker = ImagePicker(presentationController: self, delegate: self)
         
         scrollView.showsVerticalScrollIndicator = false
         
-        inputPromptView.promptTextView.delegate = self
-        inputPromptView.promptTextView.returnKeyType = .done
+//        inputPromptView.promptTextView.delegate = self
+//        inputPromptView.promptTextView.returnKeyType = .done
         
-        generateButton.setupBaseButton(title:"DESIGN", icon: R.image.icon_magic_gen() , textColor: AppColor.text_black, backgroundColor: AppColor.yellow_normal_hover, radius: 20, font: UIFont.systemFont(ofSize: 18, weight: .semibold))
+        generateButton.setupBaseButton(title:"Generate", icon: R.image.icon_magic_gen() , textColor: AppColor.guBg, backgroundColor: AppColor.guRed, radius: 15, font: UIFont.systemFont(ofSize: 18, weight: .regular))
+        
+        
+      
         
         addTabbarHeader()
         
@@ -77,17 +82,17 @@ extension CreateViewController {
         contentView.addSubview(chooseThumbView)
         contentView.addSubview(selectRoomView)
         contentView.addSubview(selectStyleView)
-        contentView.addSubview(selectRatioView)
-        contentView.addSubview(inputPromptView)
+        contentView.addSubview(generateButton)
+//        contentView.addSubview(selectRatioView)
+//        contentView.addSubview(inputPromptView)
         
         // MARK: set up Constraints
-        view.addSubview(generateButton)
         view.addSubview(loadingView)
         
         scrollView.snp.makeConstraints {
             $0.top.equalTo(tabbarHeader.snp.bottom)
             $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalTo(generateButton.snp.bottom).inset(-28.scaleX)
+            $0.bottom.equalToSuperview()
         }
         
         contentView.snp.makeConstraints {
@@ -95,42 +100,39 @@ extension CreateViewController {
         }
         
         chooseThumbView.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.equalToSuperview().inset(16)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(295.scaleX)
+            $0.height.equalTo(344.scaleX)
         }
         
         selectRoomView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(chooseThumbView.snp.bottom).inset(-20.scaleX)
+            $0.top.equalTo(chooseThumbView.snp.bottom).inset(-18.scaleX)
             $0.height.equalTo(75.scaleX)
         }
         
         selectStyleView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(selectRoomView.snp.bottom).inset(-20.scaleX)
-            $0.height.equalTo(182.scaleX)
-        }
-        
-        selectRatioView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(selectStyleView.snp.bottom).inset(-20.scaleX)
-            $0.height.equalTo(73.scaleX)
-        }
-        
-        inputPromptView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview()
-            $0.top.equalTo(selectRatioView.snp.bottom).inset(-20.scaleX)
-            $0.height.equalTo(146.scaleX)
-            $0.bottom.equalToSuperview().inset(100.scaleX)
+            $0.top.equalTo(selectRoomView.snp.bottom).inset(-15.scaleX)
+            $0.height.equalTo(113.scaleX)
         }
         
         generateButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(16.scaleX)
-            $0.bottom.equalTo(view.snp_bottomMargin).inset( 28.scaleX)
-            $0.height.equalTo(54.scaleX)
+            $0.top.equalTo(selectStyleView.snp.bottom).inset(-20.scaleX)
+            $0.height.equalTo(55.scaleX)
+            $0.bottom.equalToSuperview()
+
         }
         
+//        inputPromptView.snp.makeConstraints {
+//            $0.leading.trailing.equalToSuperview()
+//            $0.top.equalTo(selectRatioView.snp.bottom).inset(-20.scaleX)
+//            $0.height.equalTo(146.scaleX)
+//            $0.bottom.equalToSuperview().inset(100.scaleX)
+//        }
+        
+
         loadingView.snp.makeConstraints {
             $0.size.equalTo(CGSize(width: 50.scaleX, height: 50.scaleX))
             $0.center.equalToSuperview()
@@ -149,48 +151,69 @@ extension CreateViewController {
         userDefault.configSetting.ratioId = ratioConfigs.first?.id ?? ""
         userDefault.configSetting.styleId = styleConfigs.first?.id ?? ""
         userDefault.configSetting.roomId = roomConfigs.first?.id ?? ""
-        
         selectRoomView.setData(roomTypes:  roomConfigs)
         selectStyleView.setData(styles: styleConfigs)
-        selectRatioView.setData(ratio: ratioConfigs)
+//        selectRatioView.setData(ratio: ratioConfigs)
         configRatingPopup()
     }
+
     
     // MARK: Rx
     override func setupRx() {
         super.setupRx()
         configTapPremiumTabbarHeader()
+        addUploadPopupView()
+        configTapUploadPopup()
         
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillShow),
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
         
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillHide),
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil
-        )
-        
-        NotificationCenter.default.rx
-            .notification(UIApplication.didEnterBackgroundNotification)
+        tabbarHeader.galleryButton.rx.tap
+            .throttle(.milliseconds(300), scheduler: scheduler.main)
             .withUnretained(self)
+            .observe(on: scheduler.main)
             .subscribe(onNext: { owner, _ in
-                owner.hideKeyboard()
+                let galleryVC = GalleryViewController()
+                galleryVC.delegate = self
+                self.navigationController?.pushViewController(galleryVC, animated: true)
             })
             .disposed(by: disposeBag)
         
         // MARK: handle choose Thumb
-        chooseThumbView.button.rx.tap
+        chooseThumbView.thumbImageView.uploadButton.rx.tap
+            .throttle(.milliseconds(300), scheduler: scheduler.main)
             .withUnretained(self)
             .observe(on: scheduler.main)
             .subscribe(onNext: {owner, indexPath in
-                let modal = ChooseThumbModal()
-                modal.delegate = self
-                owner.presentPanModal(modal)
+                owner.showPopup(view: owner.uploadPopupView)
+            })
+            .disposed(by: disposeBag)
+        
+        chooseThumbView.thumbImageView.editButton.rx.tap
+            .throttle(.milliseconds(300), scheduler: scheduler.main)
+            .withUnretained(self)
+            .observe(on: scheduler.main)
+            .subscribe(onNext: {owner, indexPath in
+                let index = self.chooseThumbView.thumbImageView.indexCell
+                let artworkModel = self.thumbImageArray[index]
+                owner.openEditViewController(artwork: artworkModel)
+            })
+            .disposed(by: disposeBag)
+        
+        
+        uploadPopupView.rightButton.rx.tap
+            .withUnretained(self)
+            .observe(on: scheduler.main)
+            .subscribe(onNext: {owner, indexPath in
+                owner.imagePicker?.present(for: .photoLibrary)
+                owner.hideDeletePopup()
+            })
+            .disposed(by: disposeBag)
+        
+        uploadPopupView.leftButton.rx.tap
+            .withUnretained(self)
+            .observe(on: scheduler.main)
+            .subscribe(onNext: {owner, indexPath in
+                owner.imagePicker?.present(for: .camera)
+                owner.hideDeletePopup()
             })
             .disposed(by: disposeBag)
         
@@ -210,13 +233,6 @@ extension CreateViewController {
             })
             .disposed(by: disposeBag)
         
-        chooseThumbView.deleteButton.rx.tap
-            .withUnretained(self)
-            .observe(on: scheduler.main)
-            .subscribe(onNext: {owner, indexPath in
-                owner.chooseThumbView.updateView(hasImage: false)
-            })
-            .disposed(by: disposeBag)
         
         // MARK: select Room View
         selectRoomView.roomCollectionView.rx.itemSelected
@@ -289,23 +305,24 @@ extension CreateViewController {
             })
             .disposed(by: disposeBag)
         
-        selectRatioView.ratioCollectionView.rx.itemSelected
-            .withUnretained(self)
-            .observe(on: scheduler.main)
-            .subscribe(onNext: {owner, indexPath in
-                owner.selectRatioView.ratioCollectionView.selectItem(at: IndexPath(item: indexPath.row, section: 0), animated: true, scrollPosition: .centeredHorizontally)
-                let ratio = owner.viewModel.ratioConfigValue[indexPath.row]
-                owner.userDefault.configSetting.ratioId = ratio.id
-                guard let image = owner.chooseImage else {
-                    return
-                }
-                
-                let resizedImage = owner.resizeImage(image: image, targetSize: CGSize(width: ratio.width, height: ratio.height))
-                let croppedImage = owner.cropImageWithAspectRatio(image: resizedImage, aspectRatio: Double(ratio.width)/Double(ratio.height))
-                owner.chooseThumbView.thumbImageView.image = croppedImage
-                
-            })
-            .disposed(by: disposeBag)
+//        selectRatioView.ratioCollectionView.rx.itemSelected
+//            .withUnretained(self)
+//            .observe(on: scheduler.main)
+//            .subscribe(onNext: {owner, indexPath in
+//                owner.selectRatioView.ratioCollectionView.selectItem(at: IndexPath(item: indexPath.row, section: 0), animated: true, scrollPosition: .centeredHorizontally)
+//                let ratio = owner.viewModel.ratioConfigValue[indexPath.row]
+//                owner.userDefault.configSetting.ratioId = ratio.id
+//                guard let image = owner.chooseImage else {
+//                    return
+//                }
+//
+//                let resizedImage = owner.resizeImage(image: image, targetSize: CGSize(width: ratio.width, height: ratio.height))
+//                let croppedImage = owner.cropImageWithAspectRatio(image: resizedImage, aspectRatio: Double(ratio.width)/Double(ratio.height))
+//
+//
+//
+//            })
+//            .disposed(by: disposeBag)
         
         viewModel.purchaseObservable
             .withUnretained(self)
@@ -324,6 +341,24 @@ extension CreateViewController {
                 }
             })
             .disposed(by: disposeBag)
+    }
+    //delega gallery
+    func didDeleteImage(artworkDeleteArray: [ArtworkModel]) {
+        thumbImageArray = thumbImageArray.filter { artwork in
+            !artworkDeleteArray.contains { $0.id == artwork.id }
+        }
+        
+        if(thumbImageArray.count == 0) {
+            chooseThumbView.updateView(hasImage: false)
+            chooseThumbView.thumbImageView.upImageView.isHidden = false
+        } else {
+            chooseThumbView.updateView(hasImage: true)
+
+        }
+        chooseThumbView.thumbImageView.thumbImageArray = thumbImageArray
+        chooseThumbView.thumbImageView.pageControl.numberOfPages = thumbImageArray.count
+        chooseThumbView.thumbImageView.updatePageControl()
+        chooseThumbView.thumbImageView.imageCollectionView.reloadData()
     }
     
     // rating
@@ -356,21 +391,16 @@ extension CreateViewController {
         return UIImage(cgImage: cgImage)
     }
     
-    
+    // MARK: checkBeforeGen
     func checkBeforeGen() {
         
-        // Check limit idea
-        guard inputPromptView.promptTextView.text.count <= viewModel.limitConfigValue.input_idea else  {
-            popupLimit(featureName: "idea", limit: viewModel.limitConfigValue.input_idea)
-            return
-        }
-        
+
         guard let style = viewModel.styleConfigValue.first(where: {$0.id == userDefault.configSetting.styleId}) else {
             popupError(messageError: "Style null")
             return
         }
         
-        guard chooseThumbView.thumbImageView.image != nil else {
+        guard chooseThumbView.thumbImageView.upImageView.image != nil else {
             popupWarning(title: "Notification", message: "Please provide your image to generate")
             return
         }
@@ -385,7 +415,6 @@ extension CreateViewController {
     }
     
     func checkTrueTime() {
-        hideKeyboard()
         loadingView.startAnimating()
         generateButton.isUserInteractionEnabled = false
         viewModel.updateDailyTime { [weak self] result in
@@ -424,25 +453,25 @@ extension CreateViewController {
         }
     }
     
-    @objc func keyboardWillShow(_ notification: Notification) {
-        let padding = Developer.isHasNortch ? 260 : 225
-        configViewWithKeyboard(padding: padding)
-    }
-    
-    @objc func keyboardWillHide(_ notification: Notification) {
-        configViewWithKeyboard(padding: 28)
-        scrollView.scrollToBottom(animated: true)
-    }
-    
-    func configViewWithKeyboard(padding: Int) {
-        generateButton.snp.updateConstraints {
-            $0.leading.trailing.equalToSuperview().inset(16.scaleX)
-            $0.bottom.equalTo(view.snp_bottomMargin).inset(padding.scaleX)
-            $0.height.equalTo(54.scaleX)
-        }
-        
-        scrollView.setContentOffset(CGPoint(x: 0, y: 360), animated: true)
-    }
+//    @objc func keyboardWillShow(_ notification: Notification) {
+//        let padding = Developer.isHasNortch ? 260 : 225
+//        configViewWithKeyboard(padding: padding)
+//    }
+//
+//    @objc func keyboardWillHide(_ notification: Notification) {
+//        configViewWithKeyboard(padding: 28)
+//        scrollView.scrollToBottom(animated: true)
+//    }
+//
+//    func configViewWithKeyboard(padding: Int) {
+//        generateButton.snp.updateConstraints {
+//            $0.leading.trailing.equalToSuperview().inset(16.scaleX)
+//            $0.bottom.equalTo(view.snp_bottomMargin).inset(padding.scaleX)
+//            $0.height.equalTo(54.scaleX)
+//        }
+//
+//        scrollView.setContentOffset(CGPoint(x: 0, y: 360), animated: true)
+//    }
     
     func changeRoom(index: Int) {
         selectRoomView.roomCollectionView.selectItem(at: IndexPath(item: index, section: 0), animated: true, scrollPosition: .centeredHorizontally)
@@ -459,8 +488,9 @@ extension CreateViewController {
         userDefault.configSetting.styleId = style.id
     }
     
+    // MARK: genImage
+
     func genImage() {
-        // MARK: proxy
         guard !isConnectedToProxy() else {
             popupProxy()
             return
@@ -473,8 +503,8 @@ extension CreateViewController {
             return
         }
         
-        guard let dataImage = chooseThumbView.thumbImageView.image else {
-            popupWarning(title: "Notification", message: "Please provide your image to generate")
+        guard let dataImage = chooseThumbView.thumbImageView.upImageView.image else {
+            popupWarning(title: "Notification", message: "Please provide your image to generate ")
             return
         }
         
@@ -483,14 +513,16 @@ extension CreateViewController {
         if let index = viewModel.ratioConfigValue.firstIndex(where: { $0.id == userDefault.configSetting.ratioId}) {
             cropSizeSDXL = CGSize(width: viewModel.ratioConfigValue[index].width, height: viewModel.ratioConfigValue[index].height)
         }
-        let resizedImage = resizeImage(image: dataImage, targetSize: CGSize(width: cropSizeSDXL.width, height: cropSizeSDXL.height))
+        
+        let resizedImage = resizeImage(image: dataImage , targetSize: CGSize(width: cropSizeSDXL.width, height: cropSizeSDXL.height))
+        
         let croppedImage = cropImageWithAspectRatio(image: resizedImage, aspectRatio: Double(cropSizeSDXL.width)/Double(cropSizeSDXL.height))
+        
         guard let base64Image = croppedImage?.convertImageToBase64String(img: croppedImage ?? resizedImage) else { return }
-        let prompt = inputPromptView.promptTextView.text ?? ""
         stopGen = false
         tabbarViewModel.updateShowProccessingView(isShow: true)
         
-        viewModel.requestFlux(userInput: prompt, controlImage: base64Image, styleModel: styleModel)
+        viewModel.requestFlux(userInput: "", controlImage: base64Image, styleModel: styleModel)
             .flatMap { [weak self] url in
                 return self?.viewModel.pollGetReplicateResultStringOutput(url: url) ?? .empty()
             }
@@ -498,19 +530,33 @@ extension CreateViewController {
             .observe(on: scheduler.main)
             .subscribe(onNext: { [weak self] result in
                 guard let owner = self else { return }
-                guard !owner.stopGen else { return }
+                guard owner.stopGen == false else { return }
                 guard let url = result.output else { return }
-                
                 let idArtwork = String(Int64((Date().timeIntervalSince1970).rounded()))
-                let artworkModel = ArtworkModel(id: idArtwork, style: styleModel.name, prompt: prompt, room: roomModel.title , url: url)
+                let artworkModel = ArtworkModel(id: idArtwork, style: styleModel.name, prompt: "", room: roomModel.title , url: url)
+                guard owner.stopGen == false else { return }
                 HistoryViewModel.shared.updateArtWork(artWorkModel: artworkModel, artworkImage: croppedImage ?? resizedImage)
                 owner.tabbarViewModel.updateShowProccessingView(isShow:false)
+                
                 if owner.viewModel.usageLeftValue <= 0 {
                     owner.viewModel.updateMaxCreationRwAd()
                 }
-               
+                
                 owner.viewModel.updateUsage()
+                print("@@@@@@@@@@#@#@#@#@#@ next screen")
                 owner.openResultViewController(artwork: artworkModel)
+                
+                // update View
+              
+                owner.thumbImageArray.append(artworkModel)
+                owner.chooseThumbView.thumbImageView.thumbImageArray = owner.thumbImageArray
+                owner.chooseThumbView.thumbImageView.pageControl.numberOfPages = owner.thumbImageArray.count
+                owner.chooseThumbView.thumbImageView.updatePageControl()
+                owner.chooseThumbView.thumbImageView.upImageView.isHidden = true
+                owner.chooseThumbView.thumbImageView.scrollLastCell()
+                owner.chooseThumbView.thumbImageView.imageCollectionView.reloadData()
+//               owner.chooseThumbView.thumbImageView.ImageView.loadImageKF(thumbURL: artworkModel.url) {_ in}
+                
             }, onError: { [weak self] error in
                 guard let owner = self else { return }
                 owner.tabbarViewModel.updateShowProccessingView(isShow: false)
@@ -525,6 +571,12 @@ extension CreateViewController {
         resultView.updateData(artwork: artwork)
         navigationController?.pushViewController(resultView, animated: true)
     }
+    
+    func openEditViewController(artwork: ArtworkModel) {
+        let editVC = EditViewController()
+            editVC.updateData(artwork: artwork)
+        navigationController?.pushViewController(editVC, animated: true)
+    }
 }
 
 // MARK: Text view
@@ -538,9 +590,9 @@ extension CreateViewController: GrowingTextViewDelegate {
     }
     
     // hide keyboard
-    func hideKeyboard() {
-        inputPromptView.promptTextView.resignFirstResponder()
-    }
+//    func hideKeyboard() {
+//        inputPromptView.promptTextView.resignFirstResponder()
+//    }
 }
 
 extension CreateViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate ,ImagePickerDelegate {
@@ -558,7 +610,10 @@ extension CreateViewController : UIImagePickerControllerDelegate, UINavigationCo
         let croppedImage = cropImageWithAspectRatio(image: resizedImage, aspectRatio: Double(ratio.width)/Double(ratio.height))
         
         chooseImage = image
-        chooseThumbView.thumbImageView.image = croppedImage
+        
+        chooseThumbView.thumbImageView.upImageView.image = croppedImage
+       
+        chooseThumbView.thumbImageView.uploadButton.setImage(croppedImage, for: .normal)
         chooseThumbView.updateView(hasImage: true)
     }
     
@@ -641,3 +696,6 @@ extension CreateViewController: ChangeRoomDelegate, ChangeStyleDelegate, ChooseT
         changeStyle(index: index)
     }
 }
+
+
+

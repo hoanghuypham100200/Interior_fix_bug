@@ -8,8 +8,20 @@ class StyleCell: UICollectionViewCell {
     private lazy var styleThumbImageView = UIImageView()
     private lazy var iconPremium = UIImageView()
     public lazy var styleNameLabel = UILabel()
-    
+    public lazy var linearView = UIView()
     let userDefault = UserDefaultService.shared
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        linearView.layer.sublayers?.forEach { layer in
+            if layer is CAGradientLayer {
+                layer.removeFromSuperlayer() // Hoặc có thể sử dụng layer.isHidden = true nếu bạn chỉ muốn ẩn gradient mà không xóa nó.
+            }
+        }
+        
+        linearView.setupGradient(colors: [AppColor.text_black.withAlphaComponent(0).cgColor, AppColor.text_black.withAlphaComponent(0.7).cgColor,AppColor.text_black.withAlphaComponent(0.9).cgColor], locations: [0, 0.5, 1.0], start: CGPoint(x: 0.5, y: 0), end: CGPoint(x: 0.5, y: 1.0))
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,46 +40,53 @@ class StyleCell: UICollectionViewCell {
     }
     
     func setupViews() {
-        styleThumbView.layer.cornerRadius = 20.scaleX
-        styleThumbView.layer.borderColor = AppColor.yellow_normal_hover.cgColor
+        styleThumbView.layer.cornerRadius = 9.scaleX
+        styleThumbView.layer.borderColor = AppColor.guRed.cgColor
         styleThumbView.clipsToBounds = true
         
         styleThumbImageView.clipsToBounds = true
         styleThumbImageView.contentMode = .scaleAspectFill
-        styleThumbImageView.layer.cornerRadius = 16.scaleX
+        styleThumbImageView.layer.cornerRadius = 5.scaleX
         
         iconPremium.image = R.image.img_premium_lock()
         iconPremium.contentMode = .scaleAspectFit
         
-        styleNameLabel.textColor = AppColor.text_black_patriona
-        styleNameLabel.font = .systemFont(ofSize: 14, weight: .semibold)
+        styleNameLabel.textColor = AppColor.guBg
+        styleNameLabel.font = .systemFont(ofSize: 13, weight: .semibold)
+        styleNameLabel.textAlignment = .center
     }
     
     func setupConstrains() {
         addSubview(styleThumbView)
         styleThumbView.addSubview(styleThumbImageView)
         styleThumbView.addSubview(iconPremium)
-        addSubview(styleNameLabel)
+        styleThumbView.addSubview(linearView)
+        linearView.addSubview(styleNameLabel)
         
         styleThumbView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.top.equalToSuperview()
-            $0.height.equalTo(120.scaleX)
+            $0.height.equalTo(83.scaleX)
         }
         
         iconPremium.snp.makeConstraints {
-            $0.trailing.equalTo(styleThumbView.snp.trailing).inset(15.scaleX)
-            $0.top.equalTo(styleThumbView.snp.top).inset(15.scaleX)
-            $0.size.equalTo(CGSize(width: 28.scaleX, height: 28.scaleX))
+            $0.trailing.equalTo(styleThumbView.snp.trailing).inset(9.scaleX)
+            $0.top.equalTo(styleThumbView.snp.top).inset(9.scaleX)
+            $0.size.equalTo(CGSize(width: 26.scaleX, height: 26.scaleX))
         }
     
+        linearView.snp.makeConstraints {
+            $0.bottom.trailing.leading.equalToSuperview()
+            $0.height.equalTo(20.scaleX)
+        }
+        
         styleThumbImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         
         styleNameLabel.snp.makeConstraints {
-            $0.top.equalTo(styleThumbView.snp.bottom).inset(-6.scaleX)
-            $0.centerX.equalToSuperview()
+            $0.center.equalToSuperview()
+            $0.width.equalTo(83.scaleX)
         }
         
         
@@ -82,7 +101,7 @@ class StyleCell: UICollectionViewCell {
             return
         }
         
-        iconPremium.isHidden = !style.isPremium 
+        iconPremium.isHidden = !style.isPremium
         
     }
     
@@ -90,7 +109,7 @@ class StyleCell: UICollectionViewCell {
         didSet {
             styleThumbView.layer.borderWidth = isSelected ? 2.scaleX : 0
             styleThumbImageView.snp.updateConstraints {
-                $0.edges.equalToSuperview().inset(isSelected ? 6.scaleX : 0)
+                $0.edges.equalToSuperview().inset(isSelected ? 4.scaleX : 0)
             }
             
         }

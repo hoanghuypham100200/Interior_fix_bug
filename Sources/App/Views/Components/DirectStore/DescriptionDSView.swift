@@ -21,9 +21,9 @@ class DescriptionDSView: UIView {
     }
     
     private func setupViews() {
-        iconImageView.setSymbol(name: "checkmark.shield.fill", color: AppColor.guMain, size: 13, weight: .semibold)
+        iconImageView.setSymbol(name: "checkmark.shield.fill", color: AppColor.icon_shield_green, size: 13, weight: .semibold)
         
-        titleLabel.font = .systemFont(ofSize: 12, weight: .semibold)
+        titleLabel.font = .systemFont(ofSize: 13, weight: .semibold)
         titleLabel.textColor = AppColor.guMain
     }
     

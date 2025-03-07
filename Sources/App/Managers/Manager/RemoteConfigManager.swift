@@ -20,7 +20,8 @@ protocol RemoteConfigManager {
     
     var fluxModelConfigOsb: Observable<FluxConfigModel> { get }
     var fluxModelConfigValue: FluxConfigModel { get }
-    
+    var fluxFillDevModelConfigValue: FluxFillDevConfigModel { get }
+
     // Limit
     var limitConfigOsb: Observable<LimitConfigModel> { get }
     var limitConfigValue: LimitConfigModel { get }
@@ -36,8 +37,14 @@ protocol RemoteConfigManager {
     var styleConfigOsb: Observable<[StyleConfigModel]> { get }
     var styleConfigValue: [StyleConfigModel] { get }
     
+    var exampleConfigOsb: Observable<[ExampleRetouchModel]> { get }
+    var exampleConfigValue: [ExampleRetouchModel] { get }
+    
     var roomConfigOsb: Observable<[RoomTypeModel]> { get }
     var roomConfigValue: [RoomTypeModel] { get }
+    
+    var brushSizeConfigOsb: Observable<Int> { get }
+    var brushSizeConfigValue: Int { get }
     
     // MARK: Monetization
     // Onboarding config
@@ -55,8 +62,11 @@ protocol RemoteConfigManager {
     var freeUsageConfigOsb: Observable<Int> { get }
     var freeUsageConfigValue: Int { get }
     
-    var dailyUsageLimitConfigOsb: Observable<Int> { get }
-    var dailyUsageLimitConfigValue: Int { get }
+    var createDailyUsageLimitConfigOsb: Observable<Int> { get }
+    var createDailyUsageLimitConfigValue: Int { get }
+    
+    var editDailyUsageLimitConfigOsb: Observable<Int> { get }
+    var editDailyUsageLimitConfigValue: Int { get }
     
     // MARK: Another
     // Did get all value
@@ -80,7 +90,7 @@ final class RemoteConfigManagerImpl {
     // MARK: API Endpoints
     // api endpoint
     private let apiEndpointPublisher: BehaviorRelay<APIEndPointModel> = {
-        .init(value: APIEndPointModel(flux: ""))
+        .init(value: APIEndPointModel(flux: "", edit: ""))
     }()
     
     // api key
@@ -96,6 +106,10 @@ final class RemoteConfigManagerImpl {
     
     private let fluxModelConfigPublisher: BehaviorRelay<FluxConfigModel> = {
         .init(value: FluxConfigModel(input: FluxModel(steps: 0, prompt: "", guidance: 0, control_image: "", output_format: "", safety_tolerance: 0, prompt_upsampling: false)))
+    }()
+    
+    private let fluxFillDevModelConfigPublisher: BehaviorRelay<FluxFillDevConfigModel> = {
+        .init(value: FluxFillDevConfigModel(input: FluxFillDevModel(mask: "", image: "", steps: 0, prompt: "", guidance: 0, outpaint: "", output_format: "", safety_tolerance: 0, prompt_upsampling: false)))
     }()
     
     // MARK: Configs
@@ -114,9 +128,17 @@ final class RemoteConfigManagerImpl {
         .init(value: [])
     }()
     
-    // ratio
+    // example retouch
+    private let exampleRetouchConfigPublisher: BehaviorRelay<[ExampleRetouchModel]> = {
+        .init(value: [])
+    }()
+    
     private let roomConfigPublisher: BehaviorRelay<[RoomTypeModel]> = {
         .init(value: [])
+    }()
+    
+    private let brushSizeConfigPublisher: BehaviorRelay<Int> = {
+        .init(value: 0)
     }()
     
     // Limit
@@ -144,7 +166,11 @@ final class RemoteConfigManagerImpl {
         .init(value: 0)
     }()
     
-    private let dailyUsageLimitConfigPublisher: BehaviorRelay<Int> = {
+    private let createDailyUsageLimitConfigPublisher: BehaviorRelay<Int> = {
+        .init(value: 0)
+    }()
+    
+    private let editDailyUsageLimitConfigPublisher: BehaviorRelay<Int> = {
         .init(value: 0)
     }()
     
@@ -233,7 +259,7 @@ final class RemoteConfigManagerImpl {
             
             // api key
             let apiKeyRemote = self.remoteConfig.configValue(forKey: "api_key").stringValue
-            self.apiKeyPublisher.accept(apiKeyRemote ?? "")
+            self.apiKeyPublisher.accept(apiKeyRemote)
             print("RC API Endpoints 2: \(String(describing: apiKeyRemote))")
             
             // is using local key
@@ -245,6 +271,11 @@ final class RemoteConfigManagerImpl {
             let fluxModelCOnfigData = try JSONDecoder().decode(FluxConfigModel.self, from: fluxModelConfigRC)
             self.fluxModelConfigPublisher.accept(fluxModelCOnfigData)
             print("RC API Endpoints 4: \(fluxModelCOnfigData)")
+            
+            let fluxFillDevModelConfigRC = self.remoteConfig.configValue(forKey: "edit_interior_model_config").dataValue
+            let fluxFillDevModelCOnfigData = try JSONDecoder().decode(FluxFillDevConfigModel.self, from: fluxFillDevModelConfigRC)
+            self.fluxFillDevModelConfigPublisher.accept(fluxFillDevModelCOnfigData)
+            print("RC API Endpoints 5: \(fluxFillDevModelCOnfigData)")
             
             // MARK: Configs
             // ratio
@@ -258,6 +289,8 @@ final class RemoteConfigManagerImpl {
             let styleData = try JSONDecoder().decode([StyleConfigModel].self, from: styleRemote)
             self.styleConfigPublisher.accept(styleData)
             print("RC Configs 2: \(styleData)")
+            
+
             
             // room
             let roomRemote = self.remoteConfig.configValue(forKey: "room_type_configs").dataValue
@@ -275,12 +308,18 @@ final class RemoteConfigManagerImpl {
             let ratingRemote = self.remoteConfig.configValue(forKey: "rating_configs").dataValue
             let ratingData = try JSONDecoder().decode(RatingPopupRCModel.self, from: ratingRemote)
             self.ratingPublisher.accept(ratingData)
-            print("RC Configs 4: \(ratingData)")
+            print("RC Configs 5: \(ratingData)")
+            
+            // example retouch
+            let exampleRetouchRemote = self.remoteConfig.configValue(forKey: "example_retouch_configs").dataValue
+            let exampleRetouchData = try JSONDecoder().decode([ExampleRetouchModel].self, from: exampleRetouchRemote)
+            self.exampleRetouchConfigPublisher.accept(exampleRetouchData)
+            print("RC Configs 6: \(exampleRetouchData)")
             
             // MARK: Monetization
             // Onboarding
             let onboardingRC = self.remoteConfig.configValue(forKey: "onboarding").stringValue
-            self.obConfigPublisher.accept(onboardingRC ?? "")
+            self.obConfigPublisher.accept(onboardingRC)
             print("RC MONETIZATION 1: \(String(describing: onboardingRC))")
             
             // Directstore
@@ -292,23 +331,33 @@ final class RemoteConfigManagerImpl {
             // Ads
             let adsRemote = self.remoteConfig.configValue(forKey: "ads_configs").dataValue
             let adsData = try JSONDecoder().decode(AdsConfigModel.self, from: adsRemote)
+            
             self.adsConfigPublisher.accept(adsData)
             if self.userDefault.adsConfig.countShowDS.didSet == false {
                 self.userDefault.adsConfig.countShowDS.didSet = true
                 self.userDefault.adsConfig.countShowDS.count = adsData.appOpen.countShowDS
                 self.userDefault.adsConfig.maxCreation = adsData.rewarded.maxCreation
             }
+            
             print("RC MONETIZATION 3: \(adsData)")
             
-            let freeUsageRC = self.remoteConfig.configValue(forKey: "free_usage").numberValue
-            self.freeUsageConfigPublisher.accept(Int(truncating: freeUsageRC))
-            print("RC MONETIZATION 4: \(String(describing: freeUsageRC))")
+//            let freeUsageRC = self.remoteConfig.configValue(forKey: "free_usage").numberValue
+           
+//            print("RC MONETIZATION 4: \(String(describing: freeUsageRC))")
             
-            let dailyUsageRC = self.remoteConfig.configValue(forKey: "daily_usage_limit").numberValue
-            self.dailyUsageLimitConfigPublisher.accept(Int(truncating: dailyUsageRC))
-            print("RC MONETIZATION 5: \(String(describing: dailyUsageRC))")
+//            let dailyUsageRC = self.remoteConfig.configValue(forKey: "daily_usage_limit").numberValue
+//            self.createDailyUsageLimitConfigPublisher.accept(Int(truncating: dailyUsageRC))
+//            print("RC MONETIZATION 5: \(String(describing: dailyUsageRC))")
             
             // Usage
+            let dailyUsageLimit = self.remoteConfig.configValue(forKey: "limit_usage").dataValue
+            let dailyUsageLimitData = try JSONDecoder().decode(DailyUsageLimitModel.self, from: dailyUsageLimit)
+            self.createDailyUsageLimitConfigPublisher.accept(Int(truncating: dailyUsageLimitData.daily_limit.create as NSNumber))
+            self.editDailyUsageLimitConfigPublisher.accept(Int(truncating: dailyUsageLimitData.daily_limit.edit as NSNumber))
+            self.freeUsageConfigPublisher.accept(Int(truncating: dailyUsageLimitData.free_usage.create as NSNumber))
+            print("RC MONETIZATION 4: \(dailyUsageLimitData)")
+
+
             // MARK: Another
             // Did get all value
             self.didGetConfigPublisher.accept(true)
@@ -322,6 +371,7 @@ final class RemoteConfigManagerImpl {
 }
 
 extension RemoteConfigManagerImpl: RemoteConfigManager {
+    
     // MARK: API Configs
     // API Endpoint
     var apiEndpointOsb: Observable<APIEndPointModel> {
@@ -358,6 +408,15 @@ extension RemoteConfigManagerImpl: RemoteConfigManager {
     var fluxModelConfigValue: FluxConfigModel {
         fluxModelConfigPublisher.value
     }
+    
+    // fluxFillDevMode model config
+    var fluxFillDevModelConfigValue: FluxFillDevConfigModel {
+        fluxFillDevModelConfigPublisher.value
+    }
+    
+    var fluxFillDevModelConfigOsb: Observable<FluxFillDevConfigModel> {
+        fluxFillDevModelConfigPublisher.asObservable()
+    }
    
     // MARK: Configs
     // Limit
@@ -393,6 +452,25 @@ extension RemoteConfigManagerImpl: RemoteConfigManager {
     
     var styleConfigValue: [StyleConfigModel] {
         styleConfigPublisher.value
+    }
+    
+    //example retouch
+    var exampleConfigOsb: RxSwift.Observable<[ExampleRetouchModel]> {
+        exampleRetouchConfigPublisher.asObservable()
+
+    }
+    var exampleConfigValue: [ExampleRetouchModel] {
+        exampleRetouchConfigPublisher.value
+
+    }
+    
+    var brushSizeConfigOsb: RxSwift.Observable<Int> {
+        brushSizeConfigPublisher.asObservable()
+
+    }
+    
+    var brushSizeConfigValue: Int {
+        brushSizeConfigPublisher.value
     }
     
     // Room
@@ -442,13 +520,22 @@ extension RemoteConfigManagerImpl: RemoteConfigManager {
     }
     
     // Daily usage
-    var dailyUsageLimitConfigOsb: Observable<Int> {
-        dailyUsageLimitConfigPublisher.asObservable()
+    var createDailyUsageLimitConfigOsb: Observable<Int> {
+        createDailyUsageLimitConfigPublisher.asObservable()
     }
     
-    var dailyUsageLimitConfigValue: Int {
-        dailyUsageLimitConfigPublisher.value
+    var createDailyUsageLimitConfigValue: Int {
+        createDailyUsageLimitConfigPublisher.value
     }
+    
+    var editDailyUsageLimitConfigOsb: Observable<Int> {
+        editDailyUsageLimitConfigPublisher.asObservable()
+    }
+    
+    var editDailyUsageLimitConfigValue: Int {
+        editDailyUsageLimitConfigPublisher.value
+    }
+    
     
     // MARK: Another
     // Did get

@@ -44,7 +44,7 @@ extension UIView {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.colors = [
-            UIColor.black.withAlphaComponent(0).cgColor, 
+            UIColor.black.withAlphaComponent(0).cgColor,
             UIColor.black.withAlphaComponent(0.39).cgColor,
             UIColor.black.withAlphaComponent(0.8).cgColor
         ]

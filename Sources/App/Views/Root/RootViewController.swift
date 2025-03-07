@@ -3,9 +3,10 @@ import SnapKit
 import UIKit
 
 class RootViewController: BaseViewController {
-    private lazy var bgImageView = UIImageView()
     private lazy var nameAppLabel = UILabel()
-    
+    private lazy var poweredByLabel = UILabel()
+    private lazy var AiLabel = UILabel()
+
     let viewModel = RootViewModel.init()
     let obViewModel = OnboardingViewModel.shared
     let userDefault = UserDefaultService.shared
@@ -13,22 +14,31 @@ class RootViewController: BaseViewController {
     override func setupViews() {
         super.setupViews()
          
-        bgImageView.image = R.image.img_splash_screen()
-        bgImageView.contentMode = .scaleAspectFill
-        bgImageView.clipsToBounds = true
+        nameAppLabel.font = UIFont.appFont(size: 48)
+        nameAppLabel.setText(text: "Interior", color: AppColor.text_black)
         
-        nameAppLabel.font = UIFont.appFont(size: 28)
-        nameAppLabel.setText(text: "Interior AI", color: AppColor.bg_1)
+        poweredByLabel.font = UIFont.systemFont(ofSize: 16,weight: .regular)
+        poweredByLabel.setText(text: "Powered by", color: AppColor.text_black)
         
-        view.addSubview(bgImageView)
+        AiLabel.font = UIFont.systemFont(ofSize: 20,weight: .bold)
+        AiLabel.setText(text: "A.I.", color: AppColor.text_black)
+        
         view.addSubview(nameAppLabel)
-        
-        bgImageView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
+        view.addSubview(poweredByLabel)
+        view.addSubview(AiLabel)
         
         nameAppLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
+        }
+        
+        poweredByLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(34)
+        }
+        
+        AiLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(poweredByLabel.snp.bottom)
         }
        
     }

@@ -18,7 +18,7 @@ class ModalHeader: UIView {
     
     private func setupViews() {
         indicatorView.cornerRadius = 2.5
-        indicatorView.backgroundColor = AppColor.modal_indicator
+        indicatorView.backgroundColor = AppColor.ds_rtp
         
         titleLabel.textColor = AppColor.text_black_patriona
         titleLabel.font =  UIFont.appFont(size: 20)

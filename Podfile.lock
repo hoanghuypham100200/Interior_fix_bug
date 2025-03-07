@@ -76,7 +76,7 @@ PODS:
     - nanopb (~> 3.30910.0)
     - PromisesSwift (~> 2.1)
   - FirebaseSharedSwift (11.9.0)
-  - Google-Mobile-Ads-SDK (12.1.0):
+  - Google-Mobile-Ads-SDK (11.0.1):
     - GoogleUserMessagingPlatform (>= 1.1)
   - GoogleAppMeasurement (11.9.0):
     - GoogleAppMeasurement/AdIdSupport (= 11.9.0)
@@ -166,7 +166,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Crashlytics
   - Firebase/RemoteConfig
-  - Google-Mobile-Ads-SDK
+  - Google-Mobile-Ads-SDK (~> 11.0.0)
   - GrowingTextView (= 0.7.2)
   - Hero
   - IQKeyboardManagerSwift (= 6.3.0)
@@ -235,7 +235,7 @@ SPEC CHECKSUMS:
   FirebaseRemoteConfigInterop: 710954a00e956c5fe5144a8e46164f0361389203
   FirebaseSessions: 0a5e23cc8cfb84a4f6b7914b08aaaaac31ae5e58
   FirebaseSharedSwift: 574e6a5602afe4397a55c8d4f767382d620285de
-  Google-Mobile-Ads-SDK: c9e5722cac79b39241d13b911f9f1eb21bdd0802
+  Google-Mobile-Ads-SDK: 7a466427864972f5229f1f89d004b998a28ddcae
   GoogleAppMeasurement: 7225e5d0cdd2687b5cefaa0d1a052fe51c448903
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleUserMessagingPlatform: a8b56893477f67212fbc8411c139e61d463349f5
@@ -259,6 +259,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
 
-PODFILE CHECKSUM: f206fc458846b007d88f072339495668b272c114
+PODFILE CHECKSUM: 81ebf2515fc1acfacf77c2e9611a057d236ad527
 
 COCOAPODS: 1.16.2

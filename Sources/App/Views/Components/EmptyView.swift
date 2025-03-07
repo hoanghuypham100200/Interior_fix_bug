@@ -23,7 +23,7 @@ class EmptyView: UIView {
         iconEmpty.image = R.image.icon_empty()
         iconEmpty.contentMode = .scaleAspectFit
         
-        desLabel.setText(text: "Your history is empty.\nStart gen now!", color: AppColor.text_gray)
+        desLabel.setText(text: "Your gallery is empty.\nStart gen now!", color: AppColor.text_gray)
         desLabel.font = .systemFont(ofSize: 14)
         desLabel.numberOfLines = 2
         desLabel.textAlignment = .center

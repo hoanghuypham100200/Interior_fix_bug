@@ -62,15 +62,15 @@ extension UIImageView {
         }
     }
     
-    func setIconSystem(name: String, color : UIColor, weight: UIImage.SymbolWeight = .medium) {
-    let configuration = UIImage.SymbolConfiguration(weight: weight)
-    image = UIImage(systemName: name, withConfiguration: configuration)
+    func setIconSystem(name: String, color : UIColor, weight: UIImage.SymbolWeight = .medium, sizeIcon: Int) {
+        
+        image = UIImage(systemName: name, withConfiguration: UIImage.SymbolConfiguration(pointSize: CGFloat(sizeIcon), weight: .medium))
 
         // Đảm bảo rằng hình ảnh có thể thay đổi màu sắc
-     image = image?.withRenderingMode(.alwaysTemplate)
+        image = image?.withRenderingMode(.alwaysTemplate)
 
         // Đặt màu sắc bạn muốn sử dụng cho hình ảnh
-     tintColor = color
+        tintColor = color
     }
     
     func calculateWidth(for systemName: String, pointSize: CGFloat, weight: UIImage.SymbolWeight, targetHeight: CGFloat) -> CGFloat? {

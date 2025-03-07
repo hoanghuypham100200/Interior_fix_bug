@@ -2534,7 +2534,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Google-Mobile-Ads-SDK
 
-Copyright 2025 Google LLC
+Copyright 2024 Google LLC
 
 ## GoogleAppMeasurement
 

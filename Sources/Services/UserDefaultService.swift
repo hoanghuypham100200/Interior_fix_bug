@@ -32,6 +32,8 @@ final class UserDefaultService: NSObject {
         case configSetting
         case galleryPrompts
         case chatHistoryLogo //
+        case brushSize //
+
     }
    
     static let shared: UserDefaultService = .init()
@@ -59,7 +61,7 @@ final class UserDefaultService: NSObject {
     @UserDefaultWrapper(.ratingConfig, defaultValue: RatingPopConfigModel(isFirstHome: true, count_create: 1, canShow: false, didShow: false))
     var ratingConfig: RatingPopConfigModel
     
-    @UserDefaultWrapper(.configSetting, defaultValue: ConfigSettingModel(ratioId: "", roomId: "", styleId: ""))
+    @UserDefaultWrapper(.configSetting, defaultValue: ConfigSettingModel(ratioId: "", roomId: "", styleId: "",exampleId: ""))
     var configSetting: ConfigSettingModel
     
     @UserDefaultWrapper(.dsConfig, defaultValue: DirectStoreConfigModel(type: "", close_button_delay: 0))
@@ -71,8 +73,14 @@ final class UserDefaultService: NSObject {
     @UserDefaultWrapper(.logoApp, defaultValue: "")
     var logoApp: String
     
-    @UserDefaultWrapper(.usage, defaultValue: UsageModel(usageFreeCount: 0, usagePremiumCount: 0, usagePremiumLastTime: 0, isUpdatedDailyUsageWhenPurchase: false))
+    @UserDefaultWrapper(.brushSize, defaultValue: 0)
+    var brushSize: Int
+    
+    @UserDefaultWrapper(.usage, defaultValue: UsageModel(usageFreeCount: 0, createUsagePremiumCount: 0, editUsagePremiumCount: 0, usagePremiumLastTime: 0, isUpdatedDailyUsageWhenPurchase: false))
     var usage: UsageModel
+    
+
+    
     
     @UserDefaultWrapper(.galleryPrompts, defaultValue: [])
     var galleryPrompts: [ArtworkModel]

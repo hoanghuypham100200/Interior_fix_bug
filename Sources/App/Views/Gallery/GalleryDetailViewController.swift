@@ -8,9 +8,9 @@ import Toast_Swift
 class GalleryDetailViewController: BaseViewController {
 
     private lazy var artworkCollectionView = UICollectionView()
-    private lazy var listButtonOfResultView = ListButtonOfResultView()
-    
     let layout = UICollectionViewFlowLayout()
+
+    private lazy var listButtonOfResultView = ListButtonOfResultView()
     
     private lazy var centerImageView = UIImageView()
         
@@ -18,9 +18,7 @@ class GalleryDetailViewController: BaseViewController {
     private let userDefault = UserDefaultService.shared
     private let interstitialAdService: InterstitialAdService = .shared
     
-    var isFisrtLoad = true
     var isFirstDidlayout = true
-    var isLogoMode = true
     var indexCell = Int()
 }
 
@@ -55,8 +53,8 @@ extension GalleryDetailViewController: UIActionSheetDelegate {
     override func setupViews() {
         super.setupViews()
         // MARK: Setup views
+        // setup header
         screenHeader.update(title: "Results")
-        
         addScreenHeader()
         
         layout.minimumLineSpacing = 0
@@ -71,7 +69,7 @@ extension GalleryDetailViewController: UIActionSheetDelegate {
         // MARK: Setup constrains
         view.addSubview(artworkCollectionView)
         view.addSubview(listButtonOfResultView)
-        addDeletePopupView()
+        addSavePopupView()
         
         artworkCollectionView.snp.makeConstraints {
             $0.top.equalTo(screenHeader.snp.bottom)
@@ -81,22 +79,12 @@ extension GalleryDetailViewController: UIActionSheetDelegate {
         
         listButtonOfResultView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(16.scaleX)
-            $0.bottom.equalTo(view.snp_bottomMargin).inset(30.scaleX)
+            $0.bottom.equalTo(view.snp_bottomMargin).inset(13.scaleX)
             $0.height.equalTo(65.scaleX)
         }
      
     }
     
-    func deleteArtWork() {
-        let index = indexCell
-        let artworks = viewModel.artWorksValue
-        
-        configIndexCell()
-        viewModel.deleteArtWork(artWorkModel: artworks[index])
-        
-        guard viewModel.artWorksValue.isEmpty  else { return }
-        navigationController?.popViewController(animated: true)
-    }
     
     private func configIndexCell() {
         guard !viewModel.artWorksValue.isEmpty else { return }
@@ -137,20 +125,12 @@ extension GalleryDetailViewController: UIActionSheetDelegate {
         actionBackScreenHeader()
         configTapDeletePopup()
         
-        deletePopupView.sureButton.rx.tap
+        savePopupView.rightButton.rx.tap
             .withUnretained(self)
             .observe(on: scheduler.main)
             .subscribe(onNext: {owner, indexPath in
+                owner.convertImageSaveOrShare(mode: 0)
                 owner.hideDeletePopup()
-                owner.deleteArtWork()
-            })
-            .disposed(by: disposeBag)
-        
-        listButtonOfResultView.deleteButton.rx.tap
-            .withUnretained(self)
-            .observe(on: scheduler.main)
-            .subscribe(onNext: {owner, indexPath in
-                owner.showDeletePopup()
             })
             .disposed(by: disposeBag)
         
@@ -158,7 +138,7 @@ extension GalleryDetailViewController: UIActionSheetDelegate {
             .withUnretained(self)
             .observe(on: scheduler.main)
             .subscribe(onNext: {owner, indexPath in
-                owner.convertImageSaveOrShare(mode: 0)
+                owner.showPopup(view: owner.savePopupView)
             })
             .disposed(by: disposeBag)
         

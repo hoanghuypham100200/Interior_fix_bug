@@ -18,15 +18,12 @@ class ChooseButton: UIButton {
     }
     
     private func setupViews() {
-        self.backgroundColor = AppColor.bg_view_1
-        self.cornerRadius = 20.scaleX
-        self.layer.borderColor = AppColor.line_ob.cgColor
-        self.layer.borderWidth = 1
+        self.backgroundColor = AppColor.bg_ds
+        self.cornerRadius = 15.scaleX
         self.clipsToBounds = true
         
         centerView.isUserInteractionEnabled = false
         
-        rightTitleLabel.font = .systemFont(ofSize: 16, weight: .medium)
         
         iconImageView.contentMode = .scaleAspectFit
     }
@@ -42,7 +39,7 @@ class ChooseButton: UIButton {
         
         iconImageView.snp.makeConstraints {
             $0.leading.centerY.equalToSuperview()
-            $0.size.equalTo(CGSize(width: 24.scaleX, height: 19.scaleX))
+            $0.size.equalTo(CGSize(width: 21.scaleX, height: 21.scaleX))
         }
         
         rightTitleLabel.snp.makeConstraints {
@@ -51,8 +48,12 @@ class ChooseButton: UIButton {
         }
     }
     
-    public func baseSetup(color: UIColor, title: String, icon:String, weight: UIImage.SymbolWeight = .medium) {
+    public func baseSetup(color: UIColor, title: String, icon: String, weight: UIImage.SymbolWeight = .medium, textSize: Int) {
         rightTitleLabel.setText(text: title, color: color)
-        iconImageView.setIconSystem(name: icon, color: AppColor.text_black, weight: weight)
+        rightTitleLabel.font = .systemFont(ofSize: CGFloat(textSize), weight: .semibold)
+        iconImageView.setIconSystem(name: icon, color: AppColor.text_black, weight: weight, sizeIcon: textSize)
+        
+
+        
     }
 }

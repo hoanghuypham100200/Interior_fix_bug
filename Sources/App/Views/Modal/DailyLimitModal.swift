@@ -63,7 +63,7 @@ extension DailyLimitModal {
         thumbImageView.image = R.image.image_premium_modal()
         thumbImageView.contentMode = .scaleAspectFit
         
-        premiumButton.setupBaseButton(title:"Go Premium", icon: R.image.ic_sparkles(), textColor: AppColor.text_black, backgroundColor: AppColor.yellow_normal_hover, radius: 20, font: UIFont.systemFont(ofSize: 16, weight: .semibold))
+        premiumButton.setupBaseButton(title:"Go Premium", icon: R.image.ic_sparkles(), textColor: AppColor.text_black, backgroundColor: AppColor.guRed, radius: 20, font: UIFont.systemFont(ofSize: 16, weight: .semibold))
         
         //MARK: Setup views
         view.addSubview(indicatorView)

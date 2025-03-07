@@ -151,7 +151,7 @@
 		84EE91782C9BD70000717463 /* DescriptionResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE91772C9BD70000717463 /* DescriptionResultView.swift */; };
 		84EE917A2C9BDFA600717463 /* ListButtonOfResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE91792C9BDFA600717463 /* ListButtonOfResultView.swift */; };
 		84EE917C2C9C12C100717463 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE917B2C9C12C100717463 /* EmptyView.swift */; };
-		84EE91822C9D1D5C00717463 /* DeletePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE91812C9D1D5C00717463 /* DeletePopupView.swift */; };
+		84EE91822C9D1D5C00717463 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE91812C9D1D5C00717463 /* PopupView.swift */; };
 		84EE91852C9D2A2000717463 /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE91842C9D2A2000717463 /* GalleryDetailViewController.swift */; };
 		84EE91872C9D2AB600717463 /* GalleryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE91862C9D2AB600717463 /* GalleryDetailCell.swift */; };
 		A0866660244D9F8900D47629 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086665F244D9F8900D47629 /* UIImageExtension.swift */; };
@@ -172,6 +172,26 @@
 		D8A3B18B2622C39400BAAC41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A3B18A2622C39400BAAC41 /* Main.storyboard */; };
 		D8AE0C88244B3D67000C92A4 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE0C87244B3D67000C92A4 /* IntExtension.swift */; };
 		E50C01E92D7A95DE00A0447E /* RetouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C01E82D7A95CE00A0447E /* RetouchViewController.swift */; };
+		E50C01EB2D7A9C6F00A0447E /* DailyUsageLimitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C01EA2D7A9C6700A0447E /* DailyUsageLimitModel.swift */; };
+		E50C01ED2D7A9C9B00A0447E /* ExampleRetouchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C01EC2D7A9C8400A0447E /* ExampleRetouchModel.swift */; };
+		E50C01EF2D7A9CED00A0447E /* FluxFillDevConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C01EE2D7A9CEB00A0447E /* FluxFillDevConfigModel.swift */; };
+		E50C01F42D7A9DEB00A0447E /* ButtonEditListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C01F32D7A9DE400A0447E /* ButtonEditListView.swift */; };
+		E50C01F62D7A9DFA00A0447E /* InputEditDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C01F52D7A9DF400A0447E /* InputEditDetailView.swift */; };
+		E50C01F82D7A9E1500A0447E /* InputEditPromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C01F72D7A9E0300A0447E /* InputEditPromptView.swift */; };
+		E50C01FA2D7A9E5500A0447E /* EditDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C01F92D7A9E4D00A0447E /* EditDetailViewController.swift */; };
+		E50C01FC2D7A9E7400A0447E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C01FB2D7A9E6300A0447E /* EditViewController.swift */; };
+		E50C01FE2D7A9E8D00A0447E /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C01FD2D7A9E8A00A0447E /* EditViewModel.swift */; };
+		E50C02022D7A9F1B00A0447E /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C02012D7A9F1200A0447E /* HistoryViewModel.swift */; };
+		E50C02042D7AA01000A0447E /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C02032D7AA00A00A0447E /* ImageCell.swift */; };
+		E50C02062D7AA01B00A0447E /* ThumbImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C02052D7AA01B00A0447E /* ThumbImageView.swift */; };
+		E50C02082D7AA08C00A0447E /* TitleDSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C02072D7AA08500A0447E /* TitleDSView.swift */; };
+		E50C020A2D7AA0CE00A0447E /* GalleryScreenHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C02092D7AA0C800A0447E /* GalleryScreenHeader.swift */; };
+		E50C020C2D7AA11500A0447E /* DirectStoreV3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C020B2D7AA10F00A0447E /* DirectStoreV3ViewController.swift */; };
+		E50C020F2D7AA1E000A0447E /* RetouchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C020E2D7AA1DA00A0447E /* RetouchViewModel.swift */; };
+		E50C02172D7AA6C200A0447E /* ExampleRetouchView_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C02162D7AA69C00A0447E /* ExampleRetouchView_1.swift */; };
+		E50C02192D7AA75D00A0447E /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C02182D7AA75D00A0447E /* GalleryViewController.swift */; };
+		E50C021B2D7AA7E200A0447E /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C021A2D7AA7DD00A0447E /* HistoryCell.swift */; };
+		E50C021D2D7AA81900A0447E /* ExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C021C2D7AA81200A0447E /* ExampleCell.swift */; };
 		E7C5BB5223E94CA5006DC8FE /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5BB5123E94CA5006DC8FE /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -345,7 +365,7 @@
 		84EE91772C9BD70000717463 /* DescriptionResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionResultView.swift; sourceTree = "<group>"; };
 		84EE91792C9BDFA600717463 /* ListButtonOfResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButtonOfResultView.swift; sourceTree = "<group>"; };
 		84EE917B2C9C12C100717463 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
-		84EE91812C9D1D5C00717463 /* DeletePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePopupView.swift; sourceTree = "<group>"; };
+		84EE91812C9D1D5C00717463 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		84EE91842C9D2A2000717463 /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
 		84EE91862C9D2AB600717463 /* GalleryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailCell.swift; sourceTree = "<group>"; };
 		8AE688108381675F798CD853 /* Pods-AIHeadsotApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIHeadsotApp.debug.xcconfig"; path = "Target Support Files/Pods-AIHeadsotApp/Pods-AIHeadsotApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -393,6 +413,26 @@
 		D8B523C62369461F003521A6 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk/System/Library/Frameworks/iAd.framework; sourceTree = DEVELOPER_DIR; };
 		DFD024346BB2ECA94219A9EC /* Pods-PDFExpertApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PDFExpertApp.release.xcconfig"; path = "Target Support Files/Pods-PDFExpertApp/Pods-PDFExpertApp.release.xcconfig"; sourceTree = "<group>"; };
 		E50C01E82D7A95CE00A0447E /* RetouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetouchViewController.swift; sourceTree = "<group>"; };
+		E50C01EA2D7A9C6700A0447E /* DailyUsageLimitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUsageLimitModel.swift; sourceTree = "<group>"; };
+		E50C01EC2D7A9C8400A0447E /* ExampleRetouchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRetouchModel.swift; sourceTree = "<group>"; };
+		E50C01EE2D7A9CEB00A0447E /* FluxFillDevConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluxFillDevConfigModel.swift; sourceTree = "<group>"; };
+		E50C01F32D7A9DE400A0447E /* ButtonEditListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEditListView.swift; sourceTree = "<group>"; };
+		E50C01F52D7A9DF400A0447E /* InputEditDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputEditDetailView.swift; sourceTree = "<group>"; };
+		E50C01F72D7A9E0300A0447E /* InputEditPromptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputEditPromptView.swift; sourceTree = "<group>"; };
+		E50C01F92D7A9E4D00A0447E /* EditDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDetailViewController.swift; sourceTree = "<group>"; };
+		E50C01FB2D7A9E6300A0447E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		E50C01FD2D7A9E8A00A0447E /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
+		E50C02012D7A9F1200A0447E /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		E50C02032D7AA00A00A0447E /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		E50C02052D7AA01B00A0447E /* ThumbImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbImageView.swift; sourceTree = "<group>"; };
+		E50C02072D7AA08500A0447E /* TitleDSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleDSView.swift; sourceTree = "<group>"; };
+		E50C02092D7AA0C800A0447E /* GalleryScreenHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreenHeader.swift; sourceTree = "<group>"; };
+		E50C020B2D7AA10F00A0447E /* DirectStoreV3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectStoreV3ViewController.swift; sourceTree = "<group>"; };
+		E50C020E2D7AA1DA00A0447E /* RetouchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetouchViewModel.swift; sourceTree = "<group>"; };
+		E50C02162D7AA69C00A0447E /* ExampleRetouchView_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRetouchView_1.swift; sourceTree = "<group>"; };
+		E50C02182D7AA75D00A0447E /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		E50C021A2D7AA7DD00A0447E /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		E50C021C2D7AA81200A0447E /* ExampleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCell.swift; sourceTree = "<group>"; };
 		E7C5BB5123E94CA5006DC8FE /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		EA1486EA14EEC80903D6F1E6 /* Pods_AIInteriorRoomApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIInteriorRoomApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF5AD74D745EF85F2D02A50 /* Pods-GrammarAIApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrammarAIApp.release.xcconfig"; path = "Target Support Files/Pods-GrammarAIApp/Pods-GrammarAIApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -442,6 +482,7 @@
 		246A6EEB2C1849B0003CA668 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				E50C01EE2D7A9CEB00A0447E /* FluxFillDevConfigModel.swift */,
 				24F320862C2D565200BF9124 /* APIEndPointModel.swift */,
 				84EE91432C92A45700717463 /* FluxConfigModel.swift */,
 				8499C8412D6324B60082F410 /* GetResultReplicate.swift */,
@@ -457,7 +498,7 @@
 				248361572C339B450072EA33 /* AlignLeftFlowLayout.swift */,
 				84EE91112C8EE25400717463 /* AppItemView.swift */,
 				84EE910D2C8EE04000717463 /* AppView.swift */,
-				84EE91812C9D1D5C00717463 /* DeletePopupView.swift */,
+				84EE91812C9D1D5C00717463 /* PopupView.swift */,
 				84EE91772C9BD70000717463 /* DescriptionResultView.swift */,
 				84EE917B2C9C12C100717463 /* EmptyView.swift */,
 				84EE91792C9BDFA600717463 /* ListButtonOfResultView.swift */,
@@ -484,6 +525,7 @@
 		247694582936FD0E0008BDAD /* Direcstore */ = {
 			isa = PBXGroup;
 			children = (
+				E50C020B2D7AA10F00A0447E /* DirectStoreV3ViewController.swift */,
 				24B807C92BABC45800DFE5DF /* DirectStoreBaseViewController.swift */,
 				2440D9672A4ACE3300CC6E4A /* DirectStoreCell.swift */,
 				24D6036A2B8EE714003D037F /* DirectStoreViewModel.swift */,
@@ -505,6 +547,7 @@
 		2487FF922B918E320009EB73 /* DirectStore */ = {
 			isa = PBXGroup;
 			children = (
+				E50C02072D7AA08500A0447E /* TitleDSView.swift */,
 				243D47BF2BF065D60012B3FC /* BestOfferView.swift */,
 				2487FF932B918E490009EB73 /* ButtonDSV1.swift */,
 				240DE79B2CF70805001A603F /* ButtonDSV2.swift */,
@@ -518,6 +561,7 @@
 		248ED5FB2BEE165A0090DAF0 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				E50C02092D7AA0C800A0447E /* GalleryScreenHeader.swift */,
 				24A376092AA570F1008E514A /* ScreenHeader.swift */,
 				248ED5FC2BEE168A0090DAF0 /* TabbarHeader.swift */,
 				244761242C23E82200AB8D8D /* ModalHeader.swift */,
@@ -639,6 +683,8 @@
 		7F131A6C266380E500D4AFB2 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				E50C01EC2D7A9C8400A0447E /* ExampleRetouchModel.swift */,
+				E50C01EA2D7A9C6700A0447E /* DailyUsageLimitModel.swift */,
 				24E383C829F7D89E00E08CF8 /* AdsConfigModel.swift */,
 				24D3C9812BFEF66B0010B825 /* AdsModel.swift */,
 				248A68F52BC400F300CC96E4 /* CountShowDS.swift */,
@@ -745,6 +791,8 @@
 		84EE91172C90018400717463 /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				E50C02052D7AA01B00A0447E /* ThumbImageView.swift */,
+				E50C02032D7AA00A00A0447E /* ImageCell.swift */,
 				84EE91182C9001BE00717463 /* ChooseThumbView.swift */,
 				84EE911C2C904B3300717463 /* RoomCell.swift */,
 				84EE91202C904FF900717463 /* SelectRoomView.swift */,
@@ -783,8 +831,11 @@
 		84EE91832C9D29F100717463 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				E50C021A2D7AA7DD00A0447E /* HistoryCell.swift */,
+				E50C02012D7A9F1200A0447E /* HistoryViewModel.swift */,
 				84EE91842C9D2A2000717463 /* GalleryDetailViewController.swift */,
 				84EE91862C9D2AB600717463 /* GalleryDetailCell.swift */,
+				E50C02182D7AA75D00A0447E /* GalleryViewController.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -934,7 +985,7 @@
 		D843E39D249139F800152B47 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E50C01D42D7A959100A0447E /* TabRetouch */,
+				E50C01F12D7A9DB900A0447E /* Edit */,
 				84EE91832C9D29F100717463 /* Gallery */,
 				84EE91702C9ADFF500717463 /* Result */,
 				84EE91362C917E4A00717463 /* Modal */,
@@ -946,6 +997,7 @@
 				24F320802C2D54EB00BF9124 /* Tabbar */,
 				24F3208C2C2D5ACB00BF9124 /* TabCreate */,
 				247694592936FD230008BDAD /* TabSetting */,
+				E50C01D42D7A959100A0447E /* TabRetouch */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -999,9 +1051,41 @@
 		E50C01D42D7A959100A0447E /* TabRetouch */ = {
 			isa = PBXGroup;
 			children = (
+				E50C020D2D7AA1BE00A0447E /* Components */,
+				E50C020E2D7AA1DA00A0447E /* RetouchViewModel.swift */,
 				E50C01E82D7A95CE00A0447E /* RetouchViewController.swift */,
 			);
 			path = TabRetouch;
+			sourceTree = "<group>";
+		};
+		E50C01F12D7A9DB900A0447E /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				E50C01FD2D7A9E8A00A0447E /* EditViewModel.swift */,
+				E50C01FB2D7A9E6300A0447E /* EditViewController.swift */,
+				E50C01F92D7A9E4D00A0447E /* EditDetailViewController.swift */,
+				E50C01F22D7A9DCA00A0447E /* Components */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		E50C01F22D7A9DCA00A0447E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E50C01F72D7A9E0300A0447E /* InputEditPromptView.swift */,
+				E50C01F52D7A9DF400A0447E /* InputEditDetailView.swift */,
+				E50C01F32D7A9DE400A0447E /* ButtonEditListView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E50C020D2D7AA1BE00A0447E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E50C021C2D7AA81200A0447E /* ExampleCell.swift */,
+				E50C02162D7AA69C00A0447E /* ExampleRetouchView_1.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1236,6 +1320,7 @@
 				84EE91402C919B4C00717463 /* ChooseThumbModalButton.swift in Sources */,
 				84EE91352C917DD900717463 /* UIScrollViewExtension.swift in Sources */,
 				84EE91382C91800400717463 /* RoomModal.swift in Sources */,
+				E50C01F62D7A9DFA00A0447E /* InputEditDetailView.swift in Sources */,
 				24AEFE3B2A39DE0000548607 /* BaseCollectionViewCell.swift in Sources */,
 				24F320822C2D54F700BF9124 /* TabbarViewController.swift in Sources */,
 				24F320872C2D565200BF9124 /* APIEndPointModel.swift in Sources */,
@@ -1247,34 +1332,47 @@
 				D84CB6EF25373CF0000DE365 /* CommonConfigs.swift in Sources */,
 				244EB1822BFB5C1800D0FC13 /* UsageConfigModel.swift in Sources */,
 				244761252C23E82200AB8D8D /* ModalHeader.swift in Sources */,
+				E50C01F42D7A9DEB00A0447E /* ButtonEditListView.swift in Sources */,
+				E50C01FA2D7A9E5500A0447E /* EditDetailViewController.swift in Sources */,
+				E50C021B2D7AA7E200A0447E /* HistoryCell.swift in Sources */,
 				BE2C22EC22A902DF003526A6 /* Configs.swift in Sources */,
 				246C15CE2A0C9608002747C9 /* DeepLinkService.swift in Sources */,
 				248ED5F82BEE0CDF0090DAF0 /* DirectStoreV1ViewController.swift in Sources */,
+				E50C01FC2D7A9E7400A0447E /* EditViewController.swift in Sources */,
+				E50C02172D7AA6C200A0447E /* ExampleRetouchView_1.swift in Sources */,
 				84EE91852C9D2A2000717463 /* GalleryDetailViewController.swift in Sources */,
+				E50C02062D7AA01B00A0447E /* ThumbImageView.swift in Sources */,
 				84EE91192C9001BE00717463 /* ChooseThumbView.swift in Sources */,
 				2445DABD29C035FC005C027D /* RatingPopupRCModel.swift in Sources */,
+				E50C01EB2D7A9C6F00A0447E /* DailyUsageLimitModel.swift in Sources */,
 				848CF964241C987300A2C299 /* StringExtensions.swift in Sources */,
 				84EE914A2C931B3A00717463 /* ArtworkModel.swift in Sources */,
 				240DE79A2CF706CE001A603F /* DirectStoreV2ViewController.swift in Sources */,
 				24B20D2729E7B8E200312B92 /* SplashViewController.swift in Sources */,
 				242E25D72AA2D4A50034457E /* OnboardingV1ViewController.swift in Sources */,
 				84EE911D2C904B3300717463 /* RoomCell.swift in Sources */,
+				E50C01FE2D7A9E8D00A0447E /* EditViewModel.swift in Sources */,
 				2487FF942B918E490009EB73 /* ButtonDSV1.swift in Sources */,
 				84EE91272C91409B00717463 /* RatioConfigModel.swift in Sources */,
 				24F3208E2C2D5AEC00BF9124 /* CreateViewController.swift in Sources */,
 				2479932829D29F8F00B2EABB /* UIButtonExtension.swift in Sources */,
 				248A68F42BC3D3AC00CC96E4 /* AppOpenAdService.swift in Sources */,
 				24A41C902C22883200D6D3ED /* AboutItemView.swift in Sources */,
+				E50C02042D7AA01000A0447E /* ImageCell.swift in Sources */,
 				240AFB0F2C46247D00C8D8E4 /* ActionKeyboardView.swift in Sources */,
 				24031DE62B046BAC00E2FE53 /* OnboardingV1Cell.swift in Sources */,
 				24E70A482C635A0B004A35DA /* RewardedAdOptionView.swift in Sources */,
 				D86B6EA82431DF84003012C1 /* UserDefaultExtension.swift in Sources */,
+				E50C020F2D7AA1E000A0447E /* RetouchViewModel.swift in Sources */,
+				E50C02192D7AA75D00A0447E /* GalleryViewController.swift in Sources */,
 				E50C01E92D7A95DE00A0447E /* RetouchViewController.swift in Sources */,
 				D86B6EAB2431DF84003012C1 /* UIFontExtension.swift in Sources */,
 				84EE917C2C9C12C100717463 /* EmptyView.swift in Sources */,
 				248C3A662BDF61630003ADEE /* MailService.swift in Sources */,
 				24A1FA4C2B27506800B72137 /* UITableViewExtension.swift in Sources */,
+				E50C01EF2D7A9CED00A0447E /* FluxFillDevConfigModel.swift in Sources */,
 				24FD67802C368E5500B9B863 /* SpeechToTextService.swift in Sources */,
+				E50C020C2D7AA11500A0447E /* DirectStoreV3ViewController.swift in Sources */,
 				249C86E52B908CF3006D5E79 /* LogoViewModel.swift in Sources */,
 				2498F78C2A72702F0022D89E /* DirectStoreConfigModel.swift in Sources */,
 				84EE91122C8EE25400717463 /* AppItemView.swift in Sources */,
@@ -1288,7 +1386,7 @@
 				243890C42AFDD9800041EC20 /* UITextFieldExtension.swift in Sources */,
 				248361582C339B450072EA33 /* AlignLeftFlowLayout.swift in Sources */,
 				2487FF892B9172EE0009EB73 /* OnboardingModel.swift in Sources */,
-				84EE91822C9D1D5C00717463 /* DeletePopupView.swift in Sources */,
+				84EE91822C9D1D5C00717463 /* PopupView.swift in Sources */,
 				7FCAF06B26C242CD00940D98 /* AnalyticService.swift in Sources */,
 				24B6F7BA2B15DAAF00C41E12 /* UsageModel.swift in Sources */,
 				84EE91462C92F38600717463 /* ProccessingView.swift in Sources */,
@@ -1306,12 +1404,15 @@
 				84EE91232C90519A00717463 /* ViewAllButton.swift in Sources */,
 				24B807CA2BABC45800DFE5DF /* DirectStoreBaseViewController.swift in Sources */,
 				84EE91312C914BDB00717463 /* SelectRatioView.swift in Sources */,
+				E50C021D2D7AA81900A0447E /* ExampleCell.swift in Sources */,
 				84EE910E2C8EE04000717463 /* AppView.swift in Sources */,
+				E50C02082D7AA08C00A0447E /* TitleDSView.swift in Sources */,
 				244288E72C4A49AF003E620F /* ModelConfigModel.swift in Sources */,
 				249C86DD2B903800006D5E79 /* AdsManager.swift in Sources */,
 				84EE913C2C918DBB00717463 /* StyleModalCell.swift in Sources */,
 				24A3760A2AA570F1008E514A /* ScreenHeader.swift in Sources */,
 				2488DD7B2A9C9E23007E040F /* LogoCell.swift in Sources */,
+				E50C02022D7A9F1B00A0447E /* HistoryViewModel.swift in Sources */,
 				D8AE0C88244B3D67000C92A4 /* IntExtension.swift in Sources */,
 				24AD505E2C2973DC002423FB /* TrueTimeService.swift in Sources */,
 				24EDF9FC28E2A75E00C273D5 /* Constants.swift in Sources */,
@@ -1336,6 +1437,8 @@
 				249ADEAB29498DE6002F4636 /* PurchaseManager.swift in Sources */,
 				249C07B0299E0A2B00B613EB /* BaseViewModel.swift in Sources */,
 				7FB8C4EC266531F40001EE0A /* UIViewExtension.swift in Sources */,
+				E50C01ED2D7A9C9B00A0447E /* ExampleRetouchModel.swift in Sources */,
+				E50C01F82D7A9E1500A0447E /* InputEditPromptView.swift in Sources */,
 				24DEFC952BD6AFEF007122F9 /* RExtensions.swift in Sources */,
 				84EE91212C904FF900717463 /* SelectRoomView.swift in Sources */,
 				24AD50612C297A32002423FB /* RootViewModel.swift in Sources */,
@@ -1346,6 +1449,7 @@
 				84EE912B2C9146A700717463 /* StyleCell.swift in Sources */,
 				24999BD32A7A00E2004C0A71 /* RootViewController.swift in Sources */,
 				249C86DF2B906282006D5E79 /* SettingViewModel.swift in Sources */,
+				E50C020A2D7AA0CE00A0447E /* GalleryScreenHeader.swift in Sources */,
 				242BB1852C0426BC001D276F /* GoogleMobileAdsConsentManager.swift in Sources */,
 				84EE912D2C9147EA00717463 /* SelectStyleView.swift in Sources */,
 				D8A3B17D2622BFB100BAAC41 /* BaseViewController.swift in Sources */,
@@ -1425,7 +1529,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tinyleo.com.interiorroom;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
 				PRODUCT_NAME = AIInteriorRoomApp;
@@ -1473,7 +1577,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 2.0.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = tinyleo.com.interiorroom;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";

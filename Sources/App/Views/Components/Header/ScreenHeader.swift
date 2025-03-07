@@ -21,7 +21,7 @@ class ScreenHeader: UIView {
         backButton.imageView?.contentMode = .scaleAspectFit
         
         titleLabel.textColor = AppColor.text_black_patriona
-        titleLabel.font = UIFont.appFont(size: 28)
+        titleLabel.font = UIFont.appFont(size: 24)
     }
     
     private func setupConstraints() {

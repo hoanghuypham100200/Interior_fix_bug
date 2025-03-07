@@ -15,6 +15,18 @@ extension GrowingTextView {
         self.font = .systemFont(ofSize: 14)
         self.textContainerInset = UIEdgeInsets(top: 10.scaleX, left: 10.scaleX, bottom: 10.scaleX, right: 10.scaleX)
     }
+    
+    func setupEditPrompt(placeholder: String) {
+        self.placeholder = placeholder
+        self.placeholderColor = AppColor.ds_rtp
+        self.textColor = AppColor.ds_rtp
+        self.maxHeight = 112.scaleX
+        self.minHeight = 55.scaleX
+        self.backgroundColor = AppColor.bg_ds
+        self.layer.cornerRadius = 15.scaleX
+        self.font = .systemFont(ofSize: 16)
+        self.textContainerInset = UIEdgeInsets(top: 15.scaleX, left: 10.scaleX, bottom: 10.scaleX, right: 10.scaleX)
+    }
 }
 
 class CustomGrowingTextView: GrowingTextView {

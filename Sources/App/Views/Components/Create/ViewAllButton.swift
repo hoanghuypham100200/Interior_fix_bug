@@ -19,10 +19,10 @@ class ViewAllButton: UIView {
     }
     
     private func setupViews() {
-        titleLabel.setText(text: "View all", color: AppColor.text_view_all)
-        titleLabel.font = .systemFont(ofSize: 14, weight: .medium)
+        titleLabel.setText(text: "View all", color: AppColor.ds_rtp)
+        titleLabel.font = .systemFont(ofSize: 14, weight: .regular)
         
-        iconImageView.setIconSystem(name: "chevron.right", color: AppColor.text_view_all, weight: .regular)
+        iconImageView.setIconSystem(name: "chevron.right", color: AppColor.ds_rtp, weight: .regular, sizeIcon: 14)
         
     }
     

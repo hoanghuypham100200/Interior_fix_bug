@@ -18,6 +18,10 @@ protocol ModelManager {
     var genWhenRwDismissCreateOsb: Observable<Bool> { get }
     var genWhenRwDismissCreateValue: Bool { get }
     
+    // start gen when rw dismiss logo
+    var genEditWhenRwDismissCreateOsb: Observable<Bool> { get }
+    var genEditWhenRwDismissCreateValue: Bool { get }
+    
     // show rw popup logo
     var showProccessingViewOsb: Observable<Bool> { get }
     var showProccessingViewValue: Bool { get }
@@ -34,12 +38,15 @@ protocol ModelManager {
     
     // update start gen when rw dismiss
     func updateGenWhenRwCreateDismiss(isGen: Bool)
-    
+    func updateGenEditWhenRwCreateDismiss(isGen: Bool)
+
     // update Proccessing View
     func updateShowProccessingView(isShow: Bool)
     func updateCancelGenView(cancel: Bool)
     
-    func updateUsageLeft()
+    func updateCreateUsageLeft()
+    func updateEditUsageLeft()
+
     func resetUsage()
     
     // update date history artwork
@@ -56,8 +63,9 @@ final class ModelManagerImpl {
     init() {
         // Update usage left
         loadGalleryArtwork()
-        updateUsageLeft()
-        
+        updateCreateUsageLeft()
+        updateEditUsageLeft()
+
     }
     
     // danh sách ảnh
@@ -80,6 +88,10 @@ final class ModelManagerImpl {
         .init(value: false)
     }()
     
+    private let genEditWhenRwDismissCreatePublisher: BehaviorRelay<Bool> = {
+        .init(value: false)
+    }()
+    
     private let showProccessingViewPublisher: BehaviorRelay<Bool> = {
         .init(value: false)
     }()
@@ -95,6 +107,8 @@ final class ModelManagerImpl {
 }
 
 extension ModelManagerImpl: ModelManager {
+
+    
     var artWorks: Observable<[ArtworkModel]> {
         artWorksPublisher.asObservable()
     }
@@ -129,6 +143,15 @@ extension ModelManagerImpl: ModelManager {
     var genWhenRwDismissCreateValue: Bool {
         genWhenRwDismissCreatePublisher.value
     }
+    // start gen edit when rw dismiss
+
+    var genEditWhenRwDismissCreateOsb: Observable<Bool> {
+        genEditWhenRwDismissCreatePublisher.asObservable()
+    }
+    
+    var genEditWhenRwDismissCreateValue: Bool {
+        genEditWhenRwDismissCreatePublisher.value
+    }
     
     var showProccessingViewOsb: Observable<Bool> {
         showProccessingViewPublisher.asObservable()
@@ -158,6 +181,10 @@ extension ModelManagerImpl: ModelManager {
     // update start gen when rw dismiss
     func updateGenWhenRwCreateDismiss(isGen: Bool) {
         genWhenRwDismissCreatePublisher.accept(isGen)
+    }
+    
+    func updateGenEditWhenRwCreateDismiss(isGen: Bool) {
+        genEditWhenRwDismissCreatePublisher.accept(isGen)
     }
     
     func updateShowProccessingView(isShow: Bool) {
@@ -193,15 +220,28 @@ extension ModelManagerImpl: ModelManager {
 extension ModelManagerImpl {
     
     // Usage
-    func updateUsageLeft() {
+    func updateCreateUsageLeft() {
         let remoteConfigManagerImpl = RemoteConfigManagerImpl.shared
         let userDefault = UserDefaultService.shared
-        let dailyLimit = remoteConfigManagerImpl.dailyUsageLimitConfigValue    // Usage của user đã purchase
+        let dailyLimit = remoteConfigManagerImpl.createDailyUsageLimitConfigValue    // Usage của user đã purchase
         let freeUsage = remoteConfigManagerImpl.freeUsageConfigValue    // Usage của user chưa purchase
         let usage = userDefault.usage // Số usage user đã sử dụng - User default
         let isPurchase = userDefault.isPurchase
-        let usageLeft = calculateUsageLeft(limit: isPurchase ? dailyLimit : freeUsage, used: isPurchase ? usage.usagePremiumCount : usage.usageFreeCount)
-        print("USAGE LEFT: \(usageLeft)")
+        let usageLeft = calculateUsageLeft(limit: isPurchase ? dailyLimit : freeUsage, used: isPurchase ? usage.createUsagePremiumCount : usage.usageFreeCount)
+        print("USAGE CREATE LEFT: \(usageLeft)")
+        usageLeftPublisher.accept(usageLeft)
+    }
+    
+    func updateEditUsageLeft() {
+        let remoteConfigManagerImpl = RemoteConfigManagerImpl.shared
+        let userDefault = UserDefaultService.shared
+        let dailyLimit = remoteConfigManagerImpl.editDailyUsageLimitConfigValue    // Usage của user đã purchase
+        let isPurchase = userDefault.isPurchase
+        let usage = userDefault.usage // Số usage user đã sử dụng - User default
+        let freeUsage = remoteConfigManagerImpl.freeUsageConfigValue    // Usage của user chưa purchase
+
+        let usageLeft = calculateUsageLeft(limit: isPurchase ? dailyLimit : freeUsage, used: isPurchase ? usage.createUsagePremiumCount : usage.usageFreeCount )
+        print("USAGE EDIT LEFT: \(usageLeft)")
         usageLeftPublisher.accept(usageLeft)
     }
 
@@ -214,10 +254,12 @@ extension ModelManagerImpl {
     func resetUsage() {
         let userDefault = UserDefaultService.shared
         if userDefault.isPurchase {
-           userDefault.usage.usagePremiumCount = 0
+            userDefault.usage.createUsagePremiumCount = 0
+            userDefault.usage.editUsagePremiumCount = 0
         } else {
            userDefault.usage.usageFreeCount = 0
         }
-        updateUsageLeft()
+        updateCreateUsageLeft()
+        updateEditUsageLeft()
     }
 }

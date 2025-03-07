@@ -12,7 +12,7 @@ def common_pods
   pod 'Qonversion', '2.21.1'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
-  pod 'Google-Mobile-Ads-SDK'
+  pod 'Google-Mobile-Ads-SDK', '~> 11.0.0'
   pod 'Firebase'
   pod 'Firebase/RemoteConfig'
   pod 'Kingfisher', '~> 7.6.1'

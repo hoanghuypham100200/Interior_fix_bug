@@ -51,7 +51,7 @@ struct _R {
     var img_style_placeholder: RswiftResources.DataResource { .init(name: "img_style_placeholder", path: [], bundle: bundle, onDemandResourceTags: nil) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 54 images.
+  /// This `_R.image` struct is generated, and contains static references to 62 images.
   struct image {
     let bundle: Foundation.Bundle
 
@@ -64,8 +64,11 @@ struct _R {
     /// Image `bg_choose_thumb`.
     var bg_choose_thumb: RswiftResources.ImageResource { .init(name: "bg_choose_thumb", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
-    /// Image `ic_bell`.
-    var ic_bell: RswiftResources.ImageResource { .init(name: "ic_bell", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+    /// Image `bg_image_retouch`.
+    var bg_image_retouch: RswiftResources.ImageResource { .init(name: "bg_image_retouch", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `ic_pro`.
+    var ic_pro: RswiftResources.ImageResource { .init(name: "ic_pro", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `ic_sparkles`.
     var ic_sparkles: RswiftResources.ImageResource { .init(name: "ic_sparkles", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -93,6 +96,12 @@ struct _R {
 
     /// Image `icon_empty`.
     var icon_empty: RswiftResources.ImageResource { .init(name: "icon_empty", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_gallery_ac`.
+    var icon_gallery_ac: RswiftResources.ImageResource { .init(name: "icon_gallery_ac", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_gallery_un`.
+    var icon_gallery_un: RswiftResources.ImageResource { .init(name: "icon_gallery_un", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `icon_magic_gen`.
     var icon_magic_gen: RswiftResources.ImageResource { .init(name: "icon_magic_gen", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -127,8 +136,20 @@ struct _R {
     /// Image `icon_setting_term`.
     var icon_setting_term: RswiftResources.ImageResource { .init(name: "icon_setting_term", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
+    /// Image `icon_show`.
+    var icon_show: RswiftResources.ImageResource { .init(name: "icon_show", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_thumb_slider`.
+    var icon_thumb_slider: RswiftResources.ImageResource { .init(name: "icon_thumb_slider", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `icon_unknow`.
+    var icon_unknow: RswiftResources.ImageResource { .init(name: "icon_unknow", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
     /// Image `icon_unlimit`.
     var icon_unlimit: RswiftResources.ImageResource { .init(name: "icon_unlimit", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `image_feature`.
+    var image_feature: RswiftResources.ImageResource { .init(name: "image_feature", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
 
     /// Image `image_premium_modal`.
     var image_premium_modal: RswiftResources.ImageResource { .init(name: "image_premium_modal", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
@@ -216,6 +237,9 @@ struct _R {
 
     /// Image `tab_setting_unselect`.
     var tab_setting_unselect: RswiftResources.ImageResource { .init(name: "tab_setting_unselect", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `view_blur`.
+    var view_blur: RswiftResources.ImageResource { .init(name: "view_blur", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.entitlements` struct is generated, and contains static references to 0 properties.

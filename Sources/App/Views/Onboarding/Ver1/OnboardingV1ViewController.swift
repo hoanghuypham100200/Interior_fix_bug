@@ -10,7 +10,6 @@ class OnboardingV1ViewController: BaseViewController {
     private lazy var titleCell0View = UIView()
     private lazy var titleCell0Label_1 = UILabel()
     private lazy var titleCell0Label_2 = UILabel()
-    private lazy var bellIcon = UIImageView()
     private lazy var continueButton = UIButton()
     
     var currentPage = 1
@@ -48,8 +47,8 @@ extension OnboardingV1ViewController {
         titleCell0Label_2.font =  UIFont.appFont(size: 28)
         titleCell0Label_2.textColor = AppColor.text_black_patriona
         
-        descriptionLabel.font = .systemFont(ofSize: 18, weight: .medium)
-        descriptionLabel.textColor = AppColor.yellow_dark
+        descriptionLabel.font = .systemFont(ofSize: 20, weight: .semibold)
+        descriptionLabel.textColor = AppColor.guRed
         
         // MARK: Setup views
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -64,11 +63,9 @@ extension OnboardingV1ViewController {
         obCollectionView.setupCollectionView()
         obCollectionView.backgroundColor = .red
         
-        bellIcon.setIcon(icon: RImage.ic_bell())
         
-        continueButton.setupTitleButton(title: "CONTINUE", fontWeight: .semibold, fontSize: 16, titleColor: AppColor.guBg, bgColor: AppColor.red, radius: 20)
-        continueButton.layer.borderWidth = 1.scaleX
-        continueButton.layer.borderColor = AppColor.premium.cgColor
+        continueButton.setupTitleButton(title: "Continue", fontWeight: .regular, fontSize: 18, titleColor: AppColor.guBg, bgColor: AppColor.guRed, radius: 15)
+        
         
         view.addSubview(obCollectionView)
         view.addSubview(linearView)
@@ -77,7 +74,6 @@ extension OnboardingV1ViewController {
         titleCell0View.addSubview(titleCell0Label_1)
         titleCell0View.addSubview(titleCell0Label_2)
         view.addSubview(descriptionLabel)
-        view.addSubview(bellIcon)
         view.addSubview(continueButton)
         
         obCollectionView.snp.makeConstraints {
@@ -86,7 +82,7 @@ extension OnboardingV1ViewController {
         
         linearView.snp.makeConstraints {
             $0.leading.trailing.bottom.equalToSuperview()
-            $0.top.equalTo(titleLabel.snp.top).inset(-90.scaleX)
+            $0.top.equalTo(titleLabel.snp.top).inset(-55.scaleX)
         }
         
         titleLabel.snp.makeConstraints {
@@ -113,20 +109,14 @@ extension OnboardingV1ViewController {
         }
         
         descriptionLabel.snp.makeConstraints {
-            $0.bottom.equalTo(bellIcon.snp.top).inset(-8.scaleX)
+            $0.bottom.equalTo(continueButton.snp.top).inset(-20.scaleX)
             $0.centerX.equalToSuperview()
-        }
-        
-        bellIcon.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.bottom.equalTo(continueButton.snp.top).inset(-35.scaleX)
-            $0.size.equalTo(CGSize(width: 37.scaleX, height: 34.scaleX))
         }
         
         continueButton.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(16.scaleX)
-            $0.bottom.equalTo(view.snp_bottomMargin).inset(29.scaleX)
-            $0.height.equalTo(54.scaleX)
+            $0.bottom.equalToSuperview().inset(85.scaleX)
+            $0.height.equalTo(55.scaleX)
         }
     }
     
@@ -137,10 +127,10 @@ extension OnboardingV1ViewController {
     
     func updateText(obItem: OnboardingItem, index: Int){
         descriptionLabel.text = obItem.description
-        let isCell0 = index == 0
+        let isCell0 = index == 1
         titleCell0View.isHidden = !isCell0
         titleLabel.isHidden = isCell0
-        if index == 0 {
+        if index == 1 {
             titleCell0Label_1.text = obItem.title
             titleCell0Label_2.text = "ith A.I."
         } else {
@@ -183,7 +173,12 @@ extension OnboardingV1ViewController {
                 owner.updateText(obItem: value[0], index: 0)
             })
             .bind(to: obCollectionView.rx.items(cellIdentifier: OnboardingV1Cell.identifier, cellType: OnboardingV1Cell.self)) { index, data, cell in
-                cell.update(obModel: data)
+                if(index == 2) {
+                    cell.update(obModel: data, updateImage: true)
+                } else {
+                    cell.update(obModel: data, updateImage: false)
+
+                }
             }
             .disposed(by: disposeBag)
     }

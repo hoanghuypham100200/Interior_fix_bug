@@ -1,5 +1,4 @@
 import Foundation
-import IQKeyboardManagerSwift
 import RxSwift
 import AVFAudio
 import UIKit
@@ -38,12 +37,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         //MARK: Google ads
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         
-        let iqKeyboard = IQKeyboardManager.shared
-        iqKeyboard.enable = true
-        iqKeyboard.shouldResignOnTouchOutside = true
-        iqKeyboard.layoutIfNeededOnUpdate = true
-        iqKeyboard.keyboardDistanceFromTextField = 0
-        iqKeyboard.enableAutoToolbar = false
     
         // MARK: IAP
         setupIAP()
@@ -66,8 +59,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             userDefault.isCreateFolderImage = true
         }
         
+
         #if DEBUG
-//        userDefault.isPurchase = false
+//        userDefault.isPurchase = true
         #endif
         
         // MARK: Navigation

@@ -45,4 +45,8 @@ class APIManager: BaseViewModel {
     var fluxModelConfigValue: FluxConfigModel {
         remoteConfigManager.fluxModelConfigValue
     }
+    
+    var fluxFillDevModelConfigValue: FluxFillDevConfigModel {
+        remoteConfigManager.fluxFillDevModelConfigValue
+    }
 }

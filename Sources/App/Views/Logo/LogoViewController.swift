@@ -41,7 +41,7 @@ extension LogoViewController {
         super.setupViews()
         
         // MARK: Setup views
-        screenHeader.update(title: "App Icon")
+        screenHeader.update(title: "Change app icon")
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 15
@@ -55,8 +55,8 @@ extension LogoViewController {
         logoCollectionView.contentInset = UIEdgeInsets(top: 20.scaleX, left: 0, bottom: 20.scaleX, right: 0)
         logoCollectionView.setupCollectionView()
         
-        applyButton.setupBaseButton(title:"Select", icon: R.image.icon_magic_gen() , textColor: AppColor.text_black, backgroundColor: AppColor.yellow_normal_hover, radius: 20, font: UIFont.systemFont(ofSize: 16, weight: .semibold))
-        
+        applyButton.setupBaseButton(title:"Select", icon: UIImage(systemName: "checkmark") , textColor: AppColor.guBg, backgroundColor: AppColor.guRed, radius: 15, font: UIFont.systemFont(ofSize: 18, weight: .regular))
+        applyButton.tintColor = AppColor.guBg
         // MARK: Setup constraints
         addScreenHeader()
         view.addSubview(logoCollectionView)
@@ -69,9 +69,9 @@ extension LogoViewController {
         }
         
         applyButton.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(16.scaleX)
             $0.bottom.equalTo(view.snp_bottomMargin).inset(30.scaleX)
-            $0.size.equalTo(CGSize(width: 166.scaleX, height: 54.scaleX))
+            $0.size.equalTo(CGSize(width: 166.scaleX, height: 55.scaleX))
         }
     }
     
