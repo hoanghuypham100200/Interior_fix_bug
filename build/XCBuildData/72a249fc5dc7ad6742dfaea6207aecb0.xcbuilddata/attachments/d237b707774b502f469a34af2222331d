@@ -1,0 +1,338 @@
+{
+  "" : {
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/R.swift-master.dia",
+    "emit-module-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/R.swift-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/R.swift-master-emit-module.dia",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/R.swift-master.swiftdeps"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/AssetCatalog.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/AssetCatalog.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/AssetCatalog.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/AssetCatalog.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/AssetCatalog.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/AssetCatalog.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/AssetCatalog.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/AssetCatalog.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/AssetCatalog~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/ColorResource.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/DataResource.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/FileResource.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/FontResource.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/ImageResource.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/Bundle+Extensions.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Bundle+Extensions.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Bundle+Extensions.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Bundle+Extensions.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Bundle+Extensions.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Bundle+Extensions.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Bundle+Extensions.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Bundle+Extensions.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Bundle+Extensions~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/ColorResource+Integrations.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource+Integrations.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource+Integrations.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource+Integrations.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource+Integrations.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource+Integrations.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource+Integrations.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource+Integrations.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ColorResource+Integrations~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/DataResource+Integrations.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource+Integrations.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource+Integrations.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource+Integrations.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource+Integrations.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource+Integrations.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource+Integrations.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource+Integrations.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DataResource+Integrations~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/FileResource+Integrations.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource+Integrations.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource+Integrations.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource+Integrations.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource+Integrations.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource+Integrations.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource+Integrations.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource+Integrations.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FileResource+Integrations~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/FontResource+Integrations.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource+Integrations.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource+Integrations.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource+Integrations.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource+Integrations.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource+Integrations.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource+Integrations.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource+Integrations.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/FontResource+Integrations~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/ImageResource+Integrations.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource+Integrations.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource+Integrations.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource+Integrations.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource+Integrations.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource+Integrations.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource+Integrations.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource+Integrations.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ImageResource+Integrations~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/NibReference+Integrations.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibReference+Integrations.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibReference+Integrations.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibReference+Integrations.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibReference+Integrations.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibReference+Integrations.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibReference+Integrations.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibReference+Integrations.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibReference+Integrations~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/ReuseIdentifier+Integrations.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ReuseIdentifier+Integrations.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ReuseIdentifier+Integrations.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ReuseIdentifier+Integrations.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ReuseIdentifier+Integrations.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ReuseIdentifier+Integrations.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ReuseIdentifier+Integrations.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ReuseIdentifier+Integrations.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ReuseIdentifier+Integrations~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/SegueIdentifier+Integrations.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/SegueIdentifier+Integrations.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/SegueIdentifier+Integrations.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/SegueIdentifier+Integrations.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/SegueIdentifier+Integrations.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/SegueIdentifier+Integrations.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/SegueIdentifier+Integrations.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/SegueIdentifier+Integrations.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/SegueIdentifier+Integrations~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/StoryboardReference+Integrations.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference+Integrations.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference+Integrations.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference+Integrations.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference+Integrations.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference+Integrations.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference+Integrations.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference+Integrations.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference+Integrations~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Integrations/StringResource+Integrations.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource+Integrations.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource+Integrations.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource+Integrations.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource+Integrations.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource+Integrations.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource+Integrations.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource+Integrations.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource+Integrations~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/NibResource.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibResource.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibResource.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibResource.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibResource.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibResource.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibResource.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibResource.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NibResource~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/PropertyListResource.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/PropertyListResource.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/PropertyListResource.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/PropertyListResource.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/PropertyListResource.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/PropertyListResource.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/PropertyListResource.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/PropertyListResource.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/PropertyListResource~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/DeploymentTarget.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DeploymentTarget.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DeploymentTarget.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DeploymentTarget.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DeploymentTarget.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DeploymentTarget.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DeploymentTarget.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DeploymentTarget.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/DeploymentTarget~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/LocaleReference.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/LocaleReference.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/LocaleReference.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/LocaleReference.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/LocaleReference.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/LocaleReference.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/LocaleReference.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/LocaleReference.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/LocaleReference~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/ModuleReference.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ModuleReference.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ModuleReference.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ModuleReference.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ModuleReference.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ModuleReference.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ModuleReference.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ModuleReference.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ModuleReference~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/NameCatalog.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NameCatalog.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NameCatalog.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NameCatalog.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NameCatalog.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NameCatalog.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NameCatalog.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NameCatalog.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/NameCatalog~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/Reusable.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Reusable.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Reusable.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Reusable.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Reusable.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Reusable.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Reusable.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Reusable.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Reusable~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/StoryboardReference.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardReference~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/StringParam.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/StringParam+Extensions.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam+Extensions.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam+Extensions.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam+Extensions.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam+Extensions.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam+Extensions.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam+Extensions.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam+Extensions.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringParam+Extensions~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/StringsTable.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringsTable.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringsTable.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringsTable.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringsTable.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringsTable.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringsTable.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringsTable.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringsTable~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/TypeReference.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/TypeReference.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/TypeReference.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/TypeReference.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/TypeReference.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/TypeReference.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/TypeReference.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/TypeReference.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/TypeReference~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/Unifiable.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Unifiable.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Unifiable.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Unifiable.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Unifiable.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Unifiable.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Unifiable.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Unifiable.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/Unifiable~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/Shared/ValidationError.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ValidationError.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ValidationError.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ValidationError.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ValidationError.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ValidationError.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ValidationError.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ValidationError.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/ValidationError~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/StoryboardResource.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardResource.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardResource.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardResource.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardResource.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardResource.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardResource.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardResource.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StoryboardResource~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/R.swift/Sources/RswiftResources/StringResource.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/R.swift.build/Objects-normal/arm64/StringResource~partial.swiftmodule"
+  }
+}

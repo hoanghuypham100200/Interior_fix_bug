@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/thainam/Documents/TinyLeo/animediffusion/build/Debug-iphoneos/SlidableImage/SlidableImage.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/thainam/Documents/TinyLeo/animediffusion/build/Debug-iphoneos/SlidableImage/SlidableImage.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "SlidableImage-Swift.h",
+      'external-contents': "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/unextended-interface-header.h",
+    }]
+    }]
+}

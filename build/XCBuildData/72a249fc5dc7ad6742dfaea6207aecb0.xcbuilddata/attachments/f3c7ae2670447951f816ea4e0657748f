@@ -1,0 +1,5 @@
+ extern const unsigned char QonversionVersionString[];
+ extern const double QonversionVersionNumber;
+
+ const unsigned char QonversionVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Qonversion  PROJECT:Pods-1" "\n";
+ const double QonversionVersionNumber __attribute__ ((used)) = (double)1.;

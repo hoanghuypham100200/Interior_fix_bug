@@ -1,0 +1,38 @@
+{
+  "" : {
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController-master.dia",
+    "emit-module-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController-master-emit-module.dia",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController-master.swiftdeps"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/MailController/Source/MailComposeViewController.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailComposeViewController.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailComposeViewController.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailComposeViewController.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailComposeViewController.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailComposeViewController.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailComposeViewController.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailComposeViewController.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailComposeViewController~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/MailController/Source/MailController.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailController~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/MailController/Source/MailControllerDefaultResultHandler.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailControllerDefaultResultHandler.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailControllerDefaultResultHandler.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailControllerDefaultResultHandler.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailControllerDefaultResultHandler.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailControllerDefaultResultHandler.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailControllerDefaultResultHandler.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailControllerDefaultResultHandler.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/MailController.build/Objects-normal/arm64/MailControllerDefaultResultHandler~partial.swiftmodule"
+  }
+}

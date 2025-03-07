@@ -1,0 +1,5 @@
+ extern const unsigned char Pods_AnimeDiffusionAppVersionString[];
+ extern const double Pods_AnimeDiffusionAppVersionNumber;
+
+ const unsigned char Pods_AnimeDiffusionAppVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_AnimeDiffusionApp  PROJECT:Pods-1" "\n";
+ const double Pods_AnimeDiffusionAppVersionNumber __attribute__ ((used)) = (double)1.;

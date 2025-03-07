@@ -1,0 +1,6 @@
+framework module Pods_AnimeDiffusionApp {
+  umbrella header "Pods-AnimeDiffusionApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

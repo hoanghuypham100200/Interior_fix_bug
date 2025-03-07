@@ -1,0 +1,11 @@
+framework module MailController {
+  umbrella header "MailController-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MailController.Swift {
+  header "MailController-Swift.h"
+  requires objc
+}

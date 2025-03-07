@@ -1,0 +1,5 @@
+ extern const unsigned char CardsLayoutVersionString[];
+ extern const double CardsLayoutVersionNumber;
+
+ const unsigned char CardsLayoutVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:CardsLayout  PROJECT:Pods-1" "\n";
+ const double CardsLayoutVersionNumber __attribute__ ((used)) = (double)1.;

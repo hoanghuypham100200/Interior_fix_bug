@@ -1,0 +1,10 @@
+framework module MailController {
+  umbrella header "MailController-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MailController.__Swift {
+  exclude header "MailController-Swift.h"
+}

@@ -1,0 +1,18 @@
+{
+  "" : {
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast-Swift-master.dia",
+    "emit-module-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast-Swift-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast-Swift-master-emit-module.dia",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast-Swift-master.swiftdeps"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/Toast-Swift/Toast/Toast.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/Toast-Swift.build/Objects-normal/arm64/Toast~partial.swiftmodule"
+  }
+}

@@ -1,0 +1,10 @@
+framework module Mantis {
+  umbrella header "Mantis-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Mantis.__Swift {
+  exclude header "Mantis-Swift.h"
+}

@@ -1,0 +1,10 @@
+framework module CardsLayout {
+  umbrella header "CardsLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module CardsLayout.__Swift {
+  exclude header "CardsLayout-Swift.h"
+}

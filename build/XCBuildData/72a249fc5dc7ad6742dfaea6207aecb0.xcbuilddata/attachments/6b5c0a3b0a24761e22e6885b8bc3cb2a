@@ -1,0 +1,18 @@
+{
+  "" : {
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsLayout-master.dia",
+    "emit-module-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsLayout-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsLayout-master-emit-module.dia",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsLayout-master.swiftdeps"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/CardsLayout/CardsCollectionViewLayout.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsCollectionViewLayout.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsCollectionViewLayout.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsCollectionViewLayout.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsCollectionViewLayout.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsCollectionViewLayout.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsCollectionViewLayout.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsCollectionViewLayout.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/CardsLayout.build/Objects-normal/arm64/CardsCollectionViewLayout~partial.swiftmodule"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  'version': 0,
+  'use-external-names': 'false',
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/thainam/Documents/TinyLeo/animediffusion/build/Debug-iphoneos/RxRelay/RxRelay.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/RxRelay.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    'type': 'directory',
+    'name': "/Users/thainam/Documents/TinyLeo/animediffusion/build/Debug-iphoneos/RxRelay/RxRelay.framework/Headers"
+    'contents': [{
+      'type': 'file',
+      'name': "RxRelay-Swift.h",
+      'external-contents': "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/RxRelay.build/unextended-interface-header.h",
+    }]
+    }]
+}

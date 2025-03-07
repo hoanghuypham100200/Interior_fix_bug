@@ -1,0 +1,22 @@
+[
+    {
+        "version": "onboarding_v1",
+        "data": [
+            {
+                "title": "Transform your Spaces",
+                "description": "Welcome to interior.ai",
+                "thumb": "onboarding_v1_1"
+            },
+            {
+                "title": "Decor room w",
+                "description": "Unleash your inner designer",
+                "thumb": "onboarding_v1_2"
+            },
+            {
+                "title": "Redesign your room",
+                "description" : "With a variety of styles",
+                "thumb": "onboarding_v1_3"
+            }
+        ]
+    }
+]

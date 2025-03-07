@@ -1,0 +1,11 @@
+framework module SlidableImage {
+  umbrella header "SlidableImage-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module SlidableImage.Swift {
+  header "SlidableImage-Swift.h"
+  requires objc
+}

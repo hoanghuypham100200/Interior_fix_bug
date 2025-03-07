@@ -1,0 +1,5 @@
+ extern const unsigned char MantisVersionString[];
+ extern const double MantisVersionNumber;
+
+ const unsigned char MantisVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Mantis  PROJECT:Pods-1" "\n";
+ const double MantisVersionNumber __attribute__ ((used)) = (double)1.;

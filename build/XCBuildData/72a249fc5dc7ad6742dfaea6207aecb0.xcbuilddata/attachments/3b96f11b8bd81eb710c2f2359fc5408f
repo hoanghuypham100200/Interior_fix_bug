@@ -1,0 +1,5 @@
+ extern const unsigned char SlidableImageVersionString[];
+ extern const double SlidableImageVersionNumber;
+
+ const unsigned char SlidableImageVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:SlidableImage  PROJECT:Pods-1" "\n";
+ const double SlidableImageVersionNumber __attribute__ ((used)) = (double)1.;

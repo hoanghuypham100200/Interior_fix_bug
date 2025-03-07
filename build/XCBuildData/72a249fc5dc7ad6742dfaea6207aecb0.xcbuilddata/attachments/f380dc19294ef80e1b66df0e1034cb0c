@@ -1,0 +1,38 @@
+{
+  "" : {
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage-master.dia",
+    "emit-module-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage-master-emit-module.dia",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage-master.swiftdeps"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/SlidableImage/Sources/ArrowsView.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/ArrowsView.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/ArrowsView.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/ArrowsView.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/ArrowsView.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/ArrowsView.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/ArrowsView.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/ArrowsView.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/ArrowsView~partial.swiftmodule"
+  },
+  "/Users/thainam/Documents/TinyLeo/animediffusion/Pods/SlidableImage/Sources/SlidableImage.swift" : {
+    "const-values" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage.swiftconstvalues",
+    "dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage.d",
+    "diagnostics" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage.o",
+    "llvm-bc" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage.bc",
+    "object" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage.o",
+    "swift-dependencies" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage.swiftdeps",
+    "swiftmodule" : "/Users/thainam/Documents/TinyLeo/animediffusion/build/Pods.build/Debug-iphoneos/SlidableImage.build/Objects-normal/arm64/SlidableImage~partial.swiftmodule"
+  }
+}

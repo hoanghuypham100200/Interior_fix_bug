@@ -1,0 +1,5 @@
+ extern const unsigned char MailControllerVersionString[];
+ extern const double MailControllerVersionNumber;
+
+ const unsigned char MailControllerVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:MailController  PROJECT:Pods-1" "\n";
+ const double MailControllerVersionNumber __attribute__ ((used)) = (double)1.;

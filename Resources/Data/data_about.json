@@ -1,0 +1,32 @@
+[
+    {
+        "id": "about_1",
+        "name": "Share with friends",
+        "thumb": "icon_setting_share"
+    },
+    {
+        "id": "about_2",
+        "name": "Term of Use",
+        "thumb": "icon_setting_term"
+    },
+    {
+        "id": "about_3",
+        "name": "Privacy & Security",
+        "thumb": "icon_setting_privacy"
+    },
+    {
+        "id": "about_4",
+        "name": "Contact",
+        "thumb": "icon_setting_contact"
+    },
+    {
+        "id": "about_5",
+        "name": "Email us",
+        "thumb": "icon_setting_email"
+    },
+    {
+        "id": "about_6",
+        "name": "About us",
+        "thumb": "icon_setting_about"
+    }
+]
