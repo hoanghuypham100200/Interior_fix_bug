@@ -1,0 +1,264 @@
+PODS:
+  - Alamofire (5.10.2)
+  - Firebase (11.9.0):
+    - Firebase/Core (= 11.9.0)
+  - Firebase/Analytics (11.9.0):
+    - Firebase/Core
+  - Firebase/Core (11.9.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 11.9.0)
+  - Firebase/CoreOnly (11.9.0):
+    - FirebaseCore (~> 11.9.0)
+  - Firebase/Crashlytics (11.9.0):
+    - Firebase/CoreOnly
+    - FirebaseCrashlytics (~> 11.9.0)
+  - Firebase/RemoteConfig (11.9.0):
+    - Firebase/CoreOnly
+    - FirebaseRemoteConfig (~> 11.9.0)
+  - FirebaseABTesting (11.9.0):
+    - FirebaseCore (~> 11.9.0)
+  - FirebaseAnalytics (11.9.0):
+    - FirebaseAnalytics/AdIdSupport (= 11.9.0)
+    - FirebaseCore (~> 11.9.0)
+    - FirebaseInstallations (~> 11.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 8.0)
+    - GoogleUtilities/MethodSwizzler (~> 8.0)
+    - GoogleUtilities/Network (~> 8.0)
+    - "GoogleUtilities/NSData+zlib (~> 8.0)"
+    - nanopb (~> 3.30910.0)
+  - FirebaseAnalytics/AdIdSupport (11.9.0):
+    - FirebaseCore (~> 11.9.0)
+    - FirebaseInstallations (~> 11.0)
+    - GoogleAppMeasurement (= 11.9.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 8.0)
+    - GoogleUtilities/MethodSwizzler (~> 8.0)
+    - GoogleUtilities/Network (~> 8.0)
+    - "GoogleUtilities/NSData+zlib (~> 8.0)"
+    - nanopb (~> 3.30910.0)
+  - FirebaseCore (11.9.0):
+    - FirebaseCoreInternal (~> 11.9.0)
+    - GoogleUtilities/Environment (~> 8.0)
+    - GoogleUtilities/Logger (~> 8.0)
+  - FirebaseCoreExtension (11.9.0):
+    - FirebaseCore (~> 11.9.0)
+  - FirebaseCoreInternal (11.9.0):
+    - "GoogleUtilities/NSData+zlib (~> 8.0)"
+  - FirebaseCrashlytics (11.9.0):
+    - FirebaseCore (~> 11.9.0)
+    - FirebaseInstallations (~> 11.0)
+    - FirebaseRemoteConfigInterop (~> 11.0)
+    - FirebaseSessions (~> 11.0)
+    - GoogleDataTransport (~> 10.0)
+    - GoogleUtilities/Environment (~> 8.0)
+    - nanopb (~> 3.30910.0)
+    - PromisesObjC (~> 2.4)
+  - FirebaseInstallations (11.9.0):
+    - FirebaseCore (~> 11.9.0)
+    - GoogleUtilities/Environment (~> 8.0)
+    - GoogleUtilities/UserDefaults (~> 8.0)
+    - PromisesObjC (~> 2.4)
+  - FirebaseRemoteConfig (11.9.0):
+    - FirebaseABTesting (~> 11.0)
+    - FirebaseCore (~> 11.9.0)
+    - FirebaseInstallations (~> 11.0)
+    - FirebaseRemoteConfigInterop (~> 11.0)
+    - FirebaseSharedSwift (~> 11.0)
+    - GoogleUtilities/Environment (~> 8.0)
+    - "GoogleUtilities/NSData+zlib (~> 8.0)"
+  - FirebaseRemoteConfigInterop (11.9.0)
+  - FirebaseSessions (11.9.0):
+    - FirebaseCore (~> 11.9.0)
+    - FirebaseCoreExtension (~> 11.9.0)
+    - FirebaseInstallations (~> 11.0)
+    - GoogleDataTransport (~> 10.0)
+    - GoogleUtilities/Environment (~> 8.0)
+    - GoogleUtilities/UserDefaults (~> 8.0)
+    - nanopb (~> 3.30910.0)
+    - PromisesSwift (~> 2.1)
+  - FirebaseSharedSwift (11.9.0)
+  - Google-Mobile-Ads-SDK (12.1.0):
+    - GoogleUserMessagingPlatform (>= 1.1)
+  - GoogleAppMeasurement (11.9.0):
+    - GoogleAppMeasurement/AdIdSupport (= 11.9.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 8.0)
+    - GoogleUtilities/MethodSwizzler (~> 8.0)
+    - GoogleUtilities/Network (~> 8.0)
+    - "GoogleUtilities/NSData+zlib (~> 8.0)"
+    - nanopb (~> 3.30910.0)
+  - GoogleAppMeasurement/AdIdSupport (11.9.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 11.9.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 8.0)
+    - GoogleUtilities/MethodSwizzler (~> 8.0)
+    - GoogleUtilities/Network (~> 8.0)
+    - "GoogleUtilities/NSData+zlib (~> 8.0)"
+    - nanopb (~> 3.30910.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (11.9.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 8.0)
+    - GoogleUtilities/MethodSwizzler (~> 8.0)
+    - GoogleUtilities/Network (~> 8.0)
+    - "GoogleUtilities/NSData+zlib (~> 8.0)"
+    - nanopb (~> 3.30910.0)
+  - GoogleDataTransport (10.1.0):
+    - nanopb (~> 3.30910.0)
+    - PromisesObjC (~> 2.4)
+  - GoogleUserMessagingPlatform (2.7.0)
+  - GoogleUtilities/AppDelegateSwizzler (8.0.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Environment (8.0.2):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (8.0.2):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/MethodSwizzler (8.0.2):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Network (8.0.2):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Privacy
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (8.0.2)":
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (8.0.2)
+  - GoogleUtilities/Reachability (8.0.2):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/UserDefaults (8.0.2):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GrowingTextView (0.7.2)
+  - Hero (1.6.4)
+  - IQKeyboardManagerSwift (6.3.0)
+  - Kingfisher (7.6.2)
+  - lottie-ios (4.5.1)
+  - nanopb (3.30910.0):
+    - nanopb/decode (= 3.30910.0)
+    - nanopb/encode (= 3.30910.0)
+  - nanopb/decode (3.30910.0)
+  - nanopb/encode (3.30910.0)
+  - NVActivityIndicatorView (5.2.0):
+    - NVActivityIndicatorView/Base (= 5.2.0)
+  - NVActivityIndicatorView/Base (5.2.0)
+  - PanModal (1.2.7)
+  - PromisesObjC (2.4.0)
+  - PromisesSwift (2.4.0):
+    - PromisesObjC (= 2.4.0)
+  - Qonversion (2.21.1):
+    - Qonversion/Main (= 2.21.1)
+  - Qonversion/Main (2.21.1)
+  - R.swift (7.8.0)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - SnapKit (5.7.1)
+  - Toast-Swift (5.0.1)
+  - TrueTime (5.0.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - Firebase
+  - Firebase/Analytics
+  - Firebase/Crashlytics
+  - Firebase/RemoteConfig
+  - Google-Mobile-Ads-SDK
+  - GrowingTextView (= 0.7.2)
+  - Hero
+  - IQKeyboardManagerSwift (= 6.3.0)
+  - Kingfisher (~> 7.6.1)
+  - lottie-ios
+  - NVActivityIndicatorView
+  - PanModal
+  - Qonversion (= 2.21.1)
+  - R.swift
+  - RxCocoa (= 6.1.0)
+  - RxSwift (= 6.1.0)
+  - SnapKit
+  - Toast-Swift (~> 5.0.1)
+  - TrueTime
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Firebase
+    - FirebaseABTesting
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - FirebaseCrashlytics
+    - FirebaseInstallations
+    - FirebaseRemoteConfig
+    - FirebaseRemoteConfigInterop
+    - FirebaseSessions
+    - FirebaseSharedSwift
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
+    - GrowingTextView
+    - Hero
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - lottie-ios
+    - nanopb
+    - NVActivityIndicatorView
+    - PanModal
+    - PromisesObjC
+    - PromisesSwift
+    - Qonversion
+    - R.swift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - Toast-Swift
+    - TrueTime
+
+SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  Firebase: 819b973f669bc894c85e181f814171e9d4440b29
+  FirebaseABTesting: 7edd6acbd2b75ed72bd7c4d4957ee57914eafc9b
+  FirebaseAnalytics: 68aa43d0556fb7ea3957570f65417813851fcf95
+  FirebaseCore: 7cfcf7e8b33985c06478fd2b96e2f7101eb61a1c
+  FirebaseCoreExtension: b35fed507db40e6224fe36b163d34d18147da368
+  FirebaseCoreInternal: 154779013b85b4b290fdba38414df475f42e3096
+  FirebaseCrashlytics: 2eb9e0a0fc7394ae28825ca8ee18ca24452663cd
+  FirebaseInstallations: c76d4931a485fc0cc2dc1d62d3ed0369846ea4b8
+  FirebaseRemoteConfig: 69a9fa23e134776ec99b2bef3ce7804aab7956ea
+  FirebaseRemoteConfigInterop: 710954a00e956c5fe5144a8e46164f0361389203
+  FirebaseSessions: 0a5e23cc8cfb84a4f6b7914b08aaaaac31ae5e58
+  FirebaseSharedSwift: 574e6a5602afe4397a55c8d4f767382d620285de
+  Google-Mobile-Ads-SDK: c9e5722cac79b39241d13b911f9f1eb21bdd0802
+  GoogleAppMeasurement: 7225e5d0cdd2687b5cefaa0d1a052fe51c448903
+  GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
+  GoogleUserMessagingPlatform: a8b56893477f67212fbc8411c139e61d463349f5
+  GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
+  GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
+  Hero: 473a0143017e1371d050fcbedb67d317925097f2
+  IQKeyboardManagerSwift: a8228c257614af98743b4cd8584637025f36358f
+  Kingfisher: 6c5449c6450c5239166510ba04afe374a98afc4f
+  lottie-ios: 248b380fa1b97d18e792c37d90da7ab2aa0d6562
+  nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
+  NVActivityIndicatorView: fe52a6a68664c2df8991d7d9e3d86d8d19453c53
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
+  Qonversion: 0d1a640ae953a09373deac80b68995c5e94020ba
+  R.swift: f573269ca45b2ab066c082e363dd4c2b297b0d71
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  TrueTime: b49551ffafb28a9dee04e51b226f42a416010842
+
+PODFILE CHECKSUM: f206fc458846b007d88f072339495668b272c114
+
+COCOAPODS: 1.16.2
